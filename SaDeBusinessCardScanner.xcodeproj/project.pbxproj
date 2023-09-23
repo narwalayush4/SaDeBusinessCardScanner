@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A79B80242ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */; };
+		A79B80262ABF5F3C0056C6FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80252ABF5F3C0056C6FC /* MainView.swift */; };
+		A79B80282ABF5F3F0056C6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79B80272ABF5F3F0056C6FC /* Assets.xcassets */; };
+		A79B802B2ABF5F3F0056C6FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79B802A2ABF5F3F0056C6FC /* Preview Assets.xcassets */; };
+		A79B802D2ABF5F3F0056C6FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B802C2ABF5F3F0056C6FC /* Persistence.swift */; };
+		A79B80302ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A79B802E2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld */; };
+		A79B803C2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B803B2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.swift */; };
+		A79B80462ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80452ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.swift */; };
+		A79B80482ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80472ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITestsLaunchTests.swift */; };
+		A79B80592ABF60760056C6FC /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80582ABF60760056C6FC /* ScannerView.swift */; };
+		A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805A2ABF609B0056C6FC /* MainViewVM.swift */; };
+		A79B805D2ABF60B70056C6FC /* ScannerViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805C2ABF60B70056C6FC /* ScannerViewVM.swift */; };
+		A79B805F2ABF60E00056C6FC /* AddManuallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805E2ABF60E00056C6FC /* AddManuallyView.swift */; };
+		A79B80612ABF60EB0056C6FC /* AddManuallyViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */; };
+		A79B80632ABF60FD0056C6FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80622ABF60FD0056C6FC /* SettingsView.swift */; };
+		A79B80652ABF610F0056C6FC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80642ABF610F0056C6FC /* CardView.swift */; };
+		A79B80672ABF61190056C6FC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80662ABF61190056C6FC /* Card.swift */; };
+		A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80682ABF61380056C6FC /* SettingsViewVM.swift */; };
+		A79B806B2ABF61440056C6FC /* CardViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B806A2ABF61440056C6FC /* CardViewVM.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A79B80382ABF5F3F0056C6FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79B80182ABF5F3C0056C6FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A79B801F2ABF5F3C0056C6FC;
+			remoteInfo = SaDeBusinessCardScanner;
+		};
+		A79B80422ABF5F3F0056C6FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79B80182ABF5F3C0056C6FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A79B801F2ABF5F3C0056C6FC;
+			remoteInfo = SaDeBusinessCardScanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A79B80202ABF5F3C0056C6FC /* SaDeBusinessCardScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaDeBusinessCardScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaDeBusinessCardScannerApp.swift; sourceTree = "<group>"; };
+		A79B80252ABF5F3C0056C6FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A79B80272ABF5F3F0056C6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A79B802A2ABF5F3F0056C6FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A79B802C2ABF5F3F0056C6FC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		A79B802F2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaDeBusinessCardScanner.xcdatamodel; sourceTree = "<group>"; };
+		A79B80312ABF5F3F0056C6FC /* SaDeBusinessCardScanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SaDeBusinessCardScanner.entitlements; sourceTree = "<group>"; };
+		A79B80322ABF5F3F0056C6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79B80372ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaDeBusinessCardScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79B803B2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaDeBusinessCardScannerTests.swift; sourceTree = "<group>"; };
+		A79B80412ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaDeBusinessCardScannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79B80452ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaDeBusinessCardScannerUITests.swift; sourceTree = "<group>"; };
+		A79B80472ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaDeBusinessCardScannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A79B80582ABF60760056C6FC /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		A79B805A2ABF609B0056C6FC /* MainViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewVM.swift; sourceTree = "<group>"; };
+		A79B805C2ABF60B70056C6FC /* ScannerViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewVM.swift; sourceTree = "<group>"; };
+		A79B805E2ABF60E00056C6FC /* AddManuallyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManuallyView.swift; sourceTree = "<group>"; };
+		A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManuallyViewVM.swift; sourceTree = "<group>"; };
+		A79B80622ABF60FD0056C6FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A79B80642ABF610F0056C6FC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A79B80662ABF61190056C6FC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A79B80682ABF61380056C6FC /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
+		A79B806A2ABF61440056C6FC /* CardViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewVM.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A79B801D2ABF5F3C0056C6FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B80342ABF5F3F0056C6FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B803E2ABF5F3F0056C6FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A79B80172ABF5F3C0056C6FC = {
+			isa = PBXGroup;
+			children = (
+				A79B80222ABF5F3C0056C6FC /* SaDeBusinessCardScanner */,
+				A79B803A2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests */,
+				A79B80442ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests */,
+				A79B80212ABF5F3C0056C6FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A79B80212ABF5F3C0056C6FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A79B80202ABF5F3C0056C6FC /* SaDeBusinessCardScanner.app */,
+				A79B80372ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.xctest */,
+				A79B80412ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A79B80222ABF5F3C0056C6FC /* SaDeBusinessCardScanner */ = {
+			isa = PBXGroup;
+			children = (
+				A79B80542ABF5FF40056C6FC /* Views */,
+				A79B80562ABF601B0056C6FC /* Models */,
+				A79B80572ABF60420056C6FC /* ViewModels */,
+				A79B80552ABF600A0056C6FC /* Other */,
+				A79B80272ABF5F3F0056C6FC /* Assets.xcassets */,
+				A79B802C2ABF5F3F0056C6FC /* Persistence.swift */,
+				A79B80312ABF5F3F0056C6FC /* SaDeBusinessCardScanner.entitlements */,
+				A79B80322ABF5F3F0056C6FC /* Info.plist */,
+				A79B802E2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld */,
+				A79B80292ABF5F3F0056C6FC /* Preview Content */,
+			);
+			path = SaDeBusinessCardScanner;
+			sourceTree = "<group>";
+		};
+		A79B80292ABF5F3F0056C6FC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A79B802A2ABF5F3F0056C6FC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A79B803A2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A79B803B2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.swift */,
+			);
+			path = SaDeBusinessCardScannerTests;
+			sourceTree = "<group>";
+		};
+		A79B80442ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A79B80452ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.swift */,
+				A79B80472ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITestsLaunchTests.swift */,
+			);
+			path = SaDeBusinessCardScannerUITests;
+			sourceTree = "<group>";
+		};
+		A79B80542ABF5FF40056C6FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A79B80252ABF5F3C0056C6FC /* MainView.swift */,
+				A79B80582ABF60760056C6FC /* ScannerView.swift */,
+				A79B805E2ABF60E00056C6FC /* AddManuallyView.swift */,
+				A79B80622ABF60FD0056C6FC /* SettingsView.swift */,
+				A79B80642ABF610F0056C6FC /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A79B80552ABF600A0056C6FC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A79B80562ABF601B0056C6FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A79B80662ABF61190056C6FC /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A79B80572ABF60420056C6FC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A79B805A2ABF609B0056C6FC /* MainViewVM.swift */,
+				A79B805C2ABF60B70056C6FC /* ScannerViewVM.swift */,
+				A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */,
+				A79B80682ABF61380056C6FC /* SettingsViewVM.swift */,
+				A79B806A2ABF61440056C6FC /* CardViewVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A79B801F2ABF5F3C0056C6FC /* SaDeBusinessCardScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79B804B2ABF5F3F0056C6FC /* Build configuration list for PBXNativeTarget "SaDeBusinessCardScanner" */;
+			buildPhases = (
+				A79B801C2ABF5F3C0056C6FC /* Sources */,
+				A79B801D2ABF5F3C0056C6FC /* Frameworks */,
+				A79B801E2ABF5F3C0056C6FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SaDeBusinessCardScanner;
+			productName = SaDeBusinessCardScanner;
+			productReference = A79B80202ABF5F3C0056C6FC /* SaDeBusinessCardScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A79B80362ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79B804E2ABF5F3F0056C6FC /* Build configuration list for PBXNativeTarget "SaDeBusinessCardScannerTests" */;
+			buildPhases = (
+				A79B80332ABF5F3F0056C6FC /* Sources */,
+				A79B80342ABF5F3F0056C6FC /* Frameworks */,
+				A79B80352ABF5F3F0056C6FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A79B80392ABF5F3F0056C6FC /* PBXTargetDependency */,
+			);
+			name = SaDeBusinessCardScannerTests;
+			productName = SaDeBusinessCardScannerTests;
+			productReference = A79B80372ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A79B80402ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79B80512ABF5F3F0056C6FC /* Build configuration list for PBXNativeTarget "SaDeBusinessCardScannerUITests" */;
+			buildPhases = (
+				A79B803D2ABF5F3F0056C6FC /* Sources */,
+				A79B803E2ABF5F3F0056C6FC /* Frameworks */,
+				A79B803F2ABF5F3F0056C6FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A79B80432ABF5F3F0056C6FC /* PBXTargetDependency */,
+			);
+			name = SaDeBusinessCardScannerUITests;
+			productName = SaDeBusinessCardScannerUITests;
+			productReference = A79B80412ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A79B80182ABF5F3C0056C6FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A79B801F2ABF5F3C0056C6FC = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					A79B80362ABF5F3F0056C6FC = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = A79B801F2ABF5F3C0056C6FC;
+					};
+					A79B80402ABF5F3F0056C6FC = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = A79B801F2ABF5F3C0056C6FC;
+					};
+				};
+			};
+			buildConfigurationList = A79B801B2ABF5F3C0056C6FC /* Build configuration list for PBXProject "SaDeBusinessCardScanner" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A79B80172ABF5F3C0056C6FC;
+			productRefGroup = A79B80212ABF5F3C0056C6FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A79B801F2ABF5F3C0056C6FC /* SaDeBusinessCardScanner */,
+				A79B80362ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests */,
+				A79B80402ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A79B801E2ABF5F3C0056C6FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79B802B2ABF5F3F0056C6FC /* Preview Assets.xcassets in Resources */,
+				A79B80282ABF5F3F0056C6FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B80352ABF5F3F0056C6FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B803F2ABF5F3F0056C6FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A79B801C2ABF5F3C0056C6FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79B80612ABF60EB0056C6FC /* AddManuallyViewVM.swift in Sources */,
+				A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */,
+				A79B802D2ABF5F3F0056C6FC /* Persistence.swift in Sources */,
+				A79B80302ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld in Sources */,
+				A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */,
+				A79B806B2ABF61440056C6FC /* CardViewVM.swift in Sources */,
+				A79B80262ABF5F3C0056C6FC /* MainView.swift in Sources */,
+				A79B80632ABF60FD0056C6FC /* SettingsView.swift in Sources */,
+				A79B805D2ABF60B70056C6FC /* ScannerViewVM.swift in Sources */,
+				A79B80672ABF61190056C6FC /* Card.swift in Sources */,
+				A79B80242ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift in Sources */,
+				A79B80592ABF60760056C6FC /* ScannerView.swift in Sources */,
+				A79B80652ABF610F0056C6FC /* CardView.swift in Sources */,
+				A79B805F2ABF60E00056C6FC /* AddManuallyView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B80332ABF5F3F0056C6FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79B803C2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79B803D2ABF5F3F0056C6FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79B80482ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITestsLaunchTests.swift in Sources */,
+				A79B80462ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A79B80392ABF5F3F0056C6FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A79B801F2ABF5F3C0056C6FC /* SaDeBusinessCardScanner */;
+			targetProxy = A79B80382ABF5F3F0056C6FC /* PBXContainerItemProxy */;
+		};
+		A79B80432ABF5F3F0056C6FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A79B801F2ABF5F3C0056C6FC /* SaDeBusinessCardScanner */;
+			targetProxy = A79B80422ABF5F3F0056C6FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A79B80492ABF5F3F0056C6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A79B804A2ABF5F3F0056C6FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A79B804C2ABF5F3F0056C6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SaDeBusinessCardScanner/SaDeBusinessCardScanner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SaDeBusinessCardScanner/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaDeBusinessCardScanner/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A79B804D2ABF5F3F0056C6FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SaDeBusinessCardScanner/SaDeBusinessCardScanner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SaDeBusinessCardScanner/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaDeBusinessCardScanner/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A79B804F2ABF5F3F0056C6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaDeBusinessCardScanner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SaDeBusinessCardScanner";
+			};
+			name = Debug;
+		};
+		A79B80502ABF5F3F0056C6FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaDeBusinessCardScanner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SaDeBusinessCardScanner";
+			};
+			name = Release;
+		};
+		A79B80522ABF5F3F0056C6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SaDeBusinessCardScanner;
+			};
+			name = Debug;
+		};
+		A79B80532ABF5F3F0056C6FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SaDeBusinessCardScanner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A79B801B2ABF5F3C0056C6FC /* Build configuration list for PBXProject "SaDeBusinessCardScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79B80492ABF5F3F0056C6FC /* Debug */,
+				A79B804A2ABF5F3F0056C6FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79B804B2ABF5F3F0056C6FC /* Build configuration list for PBXNativeTarget "SaDeBusinessCardScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79B804C2ABF5F3F0056C6FC /* Debug */,
+				A79B804D2ABF5F3F0056C6FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79B804E2ABF5F3F0056C6FC /* Build configuration list for PBXNativeTarget "SaDeBusinessCardScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79B804F2ABF5F3F0056C6FC /* Debug */,
+				A79B80502ABF5F3F0056C6FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79B80512ABF5F3F0056C6FC /* Build configuration list for PBXNativeTarget "SaDeBusinessCardScannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79B80522ABF5F3F0056C6FC /* Debug */,
+				A79B80532ABF5F3F0056C6FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A79B802E2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A79B802F2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodel */,
+			);
+			currentVersion = A79B802F2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodel */;
+			path = SaDeBusinessCardScanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A79B80182ABF5F3C0056C6FC /* Project object */;
+}
