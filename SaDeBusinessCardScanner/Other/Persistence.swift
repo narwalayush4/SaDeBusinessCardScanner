@@ -9,13 +9,21 @@ import CoreData
 
 struct PersistenceController {
     static let shared = PersistenceController()
+    
+    let container: NSPersistentCloudKitContainer
 
     static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+        let controller = PersistenceController(inMemory: true)
+        let viewContext = controller.container.viewContext
+        for i in 0..<10 {
+            let card = Card(context: viewContext)
+            card.name_ = "name " + String(i)
+            card.company_ = "company " + String(i)
+            card.jobTitle_ = "jobtitle" + String(i)
+            card.email_ = String(i) + "@email.com"
+            card.phone_ = String(i)+String(i)+String(i)+String(i)+String(i)+String(i)
+            card.website_ = "www." + String(i) + ".com"
+            card.address_ = "address" + String(i)
         }
         do {
             try viewContext.save()
@@ -25,10 +33,9 @@ struct PersistenceController {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
-        return result
+        return controller
     }()
 
-    let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "SaDeBusinessCardScanner")
@@ -52,5 +59,31 @@ struct PersistenceController {
             }
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
+    }
+    
+    func save() {
+        let context = container.viewContext
+
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Show some error here
+                print("can't save core data to context")
+            }
+        }
+    }
+    
+    func delete(card: Card) {
+        let context = container.viewContext
+        
+        context.delete(card)
+        do {
+            try context.save()
+        } catch {
+            // Show some error here
+            print("can't delete core data entity from context")
+        }
+        
     }
 }

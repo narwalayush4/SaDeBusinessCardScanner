@@ -7,25 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A704DA7C2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704DA7B2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift */; };
+		A70512A72B164FD400307B2A /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70512A62B164FD400307B2A /* EditView.swift */; };
+		A710E0F42AC7510200808354 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710E0F32AC7510200808354 /* SideBarView.swift */; };
+		A7128ECC2B4640D10076CD8F /* LoadingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */; };
+		A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71B699C2AC4671B0010A31A /* NavBarView.swift */; };
+		A7380AA92AFE26AB00FEBD08 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */; };
+		A7380AAA2AFE26AB00FEBD08 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */; };
+		A7481C592B38465C00851887 /* AddManuallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7481C582B38465C00851887 /* AddManuallyView.swift */; };
+		A7638F252AC3D90A0037E292 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7638F242AC3D90A0037E292 /* GroupsView.swift */; };
+		A7638F292AC3DA980037E292 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7638F282AC3DA980037E292 /* Group.swift */; };
+		A7654BB82AFA629E00279B2B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7654BB72AFA629E00279B2B /* FileManager.swift */; };
+		A767AF6A2B34DDF2001E5B8E /* CardScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767AF692B34DDF2001E5B8E /* CardScannerView.swift */; };
+		A7913C0E2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7913C0D2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift */; };
 		A79B80242ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */; };
 		A79B80262ABF5F3C0056C6FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80252ABF5F3C0056C6FC /* MainView.swift */; };
 		A79B80282ABF5F3F0056C6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79B80272ABF5F3F0056C6FC /* Assets.xcassets */; };
 		A79B802B2ABF5F3F0056C6FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79B802A2ABF5F3F0056C6FC /* Preview Assets.xcassets */; };
 		A79B802D2ABF5F3F0056C6FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B802C2ABF5F3F0056C6FC /* Persistence.swift */; };
-		A79B80302ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A79B802E2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld */; };
 		A79B803C2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B803B2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.swift */; };
 		A79B80462ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80452ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.swift */; };
 		A79B80482ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80472ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITestsLaunchTests.swift */; };
-		A79B80592ABF60760056C6FC /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80582ABF60760056C6FC /* ScannerView.swift */; };
+		A79B80592ABF60760056C6FC /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80582ABF60760056C6FC /* QRScannerView.swift */; };
 		A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805A2ABF609B0056C6FC /* MainViewVM.swift */; };
-		A79B805D2ABF60B70056C6FC /* ScannerViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805C2ABF60B70056C6FC /* ScannerViewVM.swift */; };
-		A79B805F2ABF60E00056C6FC /* AddManuallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805E2ABF60E00056C6FC /* AddManuallyView.swift */; };
+		A79B805D2ABF60B70056C6FC /* CardScannerViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805C2ABF60B70056C6FC /* CardScannerViewVM.swift */; };
 		A79B80612ABF60EB0056C6FC /* AddManuallyViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */; };
 		A79B80632ABF60FD0056C6FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80622ABF60FD0056C6FC /* SettingsView.swift */; };
 		A79B80652ABF610F0056C6FC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80642ABF610F0056C6FC /* CardView.swift */; };
-		A79B80672ABF61190056C6FC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80662ABF61190056C6FC /* Card.swift */; };
+		A79B80672ABF61190056C6FC /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80662ABF61190056C6FC /* CardModel.swift */; };
 		A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80682ABF61380056C6FC /* SettingsViewVM.swift */; };
-		A79B806B2ABF61440056C6FC /* CardViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B806A2ABF61440056C6FC /* CardViewVM.swift */; };
+		A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B806C2ABF6DD60056C6FC /* TabBarView.swift */; };
+		A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */; };
+		A7DF7FCF2ACE7FA800B8D104 /* CardScannerView-temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF7FCE2ACE7FA800B8D104 /* CardScannerView-temp.swift */; };
+		A7F9E4BF2B17621300B1C8B3 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */; };
+		A7FD90EC2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7FD90EA2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld */; };
+		A7FD90F22AF7BB8E0069024D /* Card+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD90F12AF7BB8E0069024D /* Card+helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,30 +62,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A704DA7B2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithOutDropdownView.swift; sourceTree = "<group>"; };
+		A70512A62B164FD400307B2A /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		A710E0F32AC7510200808354 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
+		A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVIew.swift; sourceTree = "<group>"; };
+		A71B699C2AC4671B0010A31A /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
+		A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataClass.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataProperties.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A7481C582B38465C00851887 /* AddManuallyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddManuallyView.swift; sourceTree = "<group>"; };
+		A7638F242AC3D90A0037E292 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		A7638F282AC3DA980037E292 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		A7654BB72AFA629E00279B2B /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		A767AF692B34DDF2001E5B8E /* CardScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScannerView.swift; sourceTree = "<group>"; };
+		A7913C0D2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDropdownView.swift; sourceTree = "<group>"; };
 		A79B80202ABF5F3C0056C6FC /* SaDeBusinessCardScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaDeBusinessCardScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaDeBusinessCardScannerApp.swift; sourceTree = "<group>"; };
 		A79B80252ABF5F3C0056C6FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A79B80272ABF5F3F0056C6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A79B802A2ABF5F3F0056C6FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A79B802C2ABF5F3F0056C6FC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		A79B802F2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaDeBusinessCardScanner.xcdatamodel; sourceTree = "<group>"; };
-		A79B80312ABF5F3F0056C6FC /* SaDeBusinessCardScanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SaDeBusinessCardScanner.entitlements; sourceTree = "<group>"; };
 		A79B80322ABF5F3F0056C6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A79B80372ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaDeBusinessCardScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79B803B2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaDeBusinessCardScannerTests.swift; sourceTree = "<group>"; };
 		A79B80412ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaDeBusinessCardScannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79B80452ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaDeBusinessCardScannerUITests.swift; sourceTree = "<group>"; };
 		A79B80472ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaDeBusinessCardScannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A79B80582ABF60760056C6FC /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		A79B80582ABF60760056C6FC /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		A79B805A2ABF609B0056C6FC /* MainViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewVM.swift; sourceTree = "<group>"; };
-		A79B805C2ABF60B70056C6FC /* ScannerViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewVM.swift; sourceTree = "<group>"; };
-		A79B805E2ABF60E00056C6FC /* AddManuallyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManuallyView.swift; sourceTree = "<group>"; };
+		A79B805C2ABF60B70056C6FC /* CardScannerViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScannerViewVM.swift; sourceTree = "<group>"; };
 		A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManuallyViewVM.swift; sourceTree = "<group>"; };
 		A79B80622ABF60FD0056C6FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A79B80642ABF610F0056C6FC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		A79B80662ABF61190056C6FC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A79B80662ABF61190056C6FC /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		A79B80682ABF61380056C6FC /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
-		A79B806A2ABF61440056C6FC /* CardViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewVM.swift; sourceTree = "<group>"; };
+		A79B806C2ABF6DD60056C6FC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextRecognizable.swift; sourceTree = "<group>"; };
+		A7DF7FCE2ACE7FA800B8D104 /* CardScannerView-temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardScannerView-temp.swift"; sourceTree = "<group>"; };
+		A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
+		A7FD90EB2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaDeBusinessCardScanner.xcdatamodel; sourceTree = "<group>"; };
+		A7FD90F12AF7BB8E0069024D /* Card+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +128,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A736B8042ACC5EC300F8FF0F /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				A79B80642ABF610F0056C6FC /* CardView.swift */,
+				A79B806C2ABF6DD60056C6FC /* TabBarView.swift */,
+				A71B699C2AC4671B0010A31A /* NavBarView.swift */,
+				A7913C0D2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift */,
+				A704DA7B2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		A73D052B2AE3790500223552 /* SubView-ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "SubView-ViewModels";
+			sourceTree = "<group>";
+		};
 		A79B80172ABF5F3C0056C6FC = {
 			isa = PBXGroup;
 			children = (
+				A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */,
+				A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */,
 				A79B80222ABF5F3C0056C6FC /* SaDeBusinessCardScanner */,
 				A79B803A2ABF5F3F0056C6FC /* SaDeBusinessCardScannerTests */,
 				A79B80442ABF5F3F0056C6FC /* SaDeBusinessCardScannerUITests */,
@@ -120,16 +172,13 @@
 		A79B80222ABF5F3C0056C6FC /* SaDeBusinessCardScanner */ = {
 			isa = PBXGroup;
 			children = (
-				A79B80542ABF5FF40056C6FC /* Views */,
 				A79B80562ABF601B0056C6FC /* Models */,
+				A79B80542ABF5FF40056C6FC /* Views */,
 				A79B80572ABF60420056C6FC /* ViewModels */,
-				A79B80552ABF600A0056C6FC /* Other */,
-				A79B80272ABF5F3F0056C6FC /* Assets.xcassets */,
-				A79B802C2ABF5F3F0056C6FC /* Persistence.swift */,
-				A79B80312ABF5F3F0056C6FC /* SaDeBusinessCardScanner.entitlements */,
-				A79B80322ABF5F3F0056C6FC /* Info.plist */,
-				A79B802E2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld */,
 				A79B80292ABF5F3F0056C6FC /* Preview Content */,
+				A79B80552ABF600A0056C6FC /* Other */,
+				A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */,
+				A79B80322ABF5F3F0056C6FC /* Info.plist */,
 			);
 			path = SaDeBusinessCardScanner;
 			sourceTree = "<group>";
@@ -162,11 +211,18 @@
 		A79B80542ABF5FF40056C6FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A736B8042ACC5EC300F8FF0F /* SubViews */,
 				A79B80252ABF5F3C0056C6FC /* MainView.swift */,
-				A79B80582ABF60760056C6FC /* ScannerView.swift */,
-				A79B805E2ABF60E00056C6FC /* AddManuallyView.swift */,
+				A79B80582ABF60760056C6FC /* QRScannerView.swift */,
+				A7481C582B38465C00851887 /* AddManuallyView.swift */,
 				A79B80622ABF60FD0056C6FC /* SettingsView.swift */,
-				A79B80642ABF610F0056C6FC /* CardView.swift */,
+				A7638F242AC3D90A0037E292 /* GroupsView.swift */,
+				A710E0F32AC7510200808354 /* SideBarView.swift */,
+				A7DF7FCE2ACE7FA800B8D104 /* CardScannerView-temp.swift */,
+				A767AF692B34DDF2001E5B8E /* CardScannerView.swift */,
+				A70512A62B164FD400307B2A /* EditView.swift */,
+				A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */,
+				A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,7 +230,9 @@
 		A79B80552ABF600A0056C6FC /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */,
+				A7FD90EA2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld */,
+				A79B802C2ABF5F3F0056C6FC /* Persistence.swift */,
+				A79B80272ABF5F3F0056C6FC /* Assets.xcassets */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -182,7 +240,10 @@
 		A79B80562ABF601B0056C6FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A79B80662ABF61190056C6FC /* Card.swift */,
+				A79B80662ABF61190056C6FC /* CardModel.swift */,
+				A7638F282AC3DA980037E292 /* Group.swift */,
+				A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */,
+				A7FD90F12AF7BB8E0069024D /* Card+helper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,10 +252,11 @@
 			isa = PBXGroup;
 			children = (
 				A79B805A2ABF609B0056C6FC /* MainViewVM.swift */,
-				A79B805C2ABF60B70056C6FC /* ScannerViewVM.swift */,
+				A79B805C2ABF60B70056C6FC /* CardScannerViewVM.swift */,
 				A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */,
 				A79B80682ABF61380056C6FC /* SettingsViewVM.swift */,
-				A79B806A2ABF61440056C6FC /* CardViewVM.swift */,
+				A73D052B2AE3790500223552 /* SubView-ViewModels */,
+				A7654BB72AFA629E00279B2B /* FileManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -287,6 +349,8 @@
 				Base,
 			);
 			mainGroup = A79B80172ABF5F3C0056C6FC;
+			packageReferences = (
+			);
 			productRefGroup = A79B80212ABF5F3C0056C6FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,19 +394,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79B80612ABF60EB0056C6FC /* AddManuallyViewVM.swift in Sources */,
+				A7380AA92AFE26AB00FEBD08 /* Card+CoreDataClass.swift in Sources */,
+				A7638F292AC3DA980037E292 /* Group.swift in Sources */,
+				A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */,
 				A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */,
+				A7128ECC2B4640D10076CD8F /* LoadingVIew.swift in Sources */,
+				A710E0F42AC7510200808354 /* SideBarView.swift in Sources */,
 				A79B802D2ABF5F3F0056C6FC /* Persistence.swift in Sources */,
-				A79B80302ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld in Sources */,
+				A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */,
+				A7FD90EC2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld in Sources */,
 				A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */,
-				A79B806B2ABF61440056C6FC /* CardViewVM.swift in Sources */,
+				A7913C0E2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift in Sources */,
+				A7F9E4BF2B17621300B1C8B3 /* CardDetailsView.swift in Sources */,
+				A7638F252AC3D90A0037E292 /* GroupsView.swift in Sources */,
 				A79B80262ABF5F3C0056C6FC /* MainView.swift in Sources */,
 				A79B80632ABF60FD0056C6FC /* SettingsView.swift in Sources */,
-				A79B805D2ABF60B70056C6FC /* ScannerViewVM.swift in Sources */,
-				A79B80672ABF61190056C6FC /* Card.swift in Sources */,
+				A79B805D2ABF60B70056C6FC /* CardScannerViewVM.swift in Sources */,
+				A7654BB82AFA629E00279B2B /* FileManager.swift in Sources */,
+				A704DA7C2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift in Sources */,
+				A79B80672ABF61190056C6FC /* CardModel.swift in Sources */,
+				A767AF6A2B34DDF2001E5B8E /* CardScannerView.swift in Sources */,
+				A7481C592B38465C00851887 /* AddManuallyView.swift in Sources */,
 				A79B80242ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift in Sources */,
-				A79B80592ABF60760056C6FC /* ScannerView.swift in Sources */,
+				A7DF7FCF2ACE7FA800B8D104 /* CardScannerView-temp.swift in Sources */,
+				A79B80592ABF60760056C6FC /* QRScannerView.swift in Sources */,
 				A79B80652ABF610F0056C6FC /* CardView.swift in Sources */,
-				A79B805F2ABF60E00056C6FC /* AddManuallyView.swift in Sources */,
+				A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */,
+				A70512A72B164FD400307B2A /* EditView.swift in Sources */,
+				A7FD90F22AF7BB8E0069024D /* Card+helper.swift in Sources */,
+				A7380AAA2AFE26AB00FEBD08 /* Card+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,13 +583,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = SaDeBusinessCardScanner/SaDeBusinessCardScanner.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SaDeBusinessCardScanner/Preview Content\"";
+				DEVELOPMENT_TEAM = YFSF8L2Y7G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SaDeBusinessCardScanner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -522,6 +606,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,13 +618,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = SaDeBusinessCardScanner/SaDeBusinessCardScanner.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SaDeBusinessCardScanner/Preview Content\"";
+				DEVELOPMENT_TEAM = YFSF8L2Y7G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SaDeBusinessCardScanner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +641,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,6 +655,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YFSF8L2Y7G;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -584,6 +675,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YFSF8L2Y7G;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -600,12 +692,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YFSF8L2Y7G;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScannerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,12 +712,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YFSF8L2Y7G;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScannerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -672,12 +770,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A79B802E2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodeld */ = {
+		A7FD90EA2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A79B802F2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodel */,
+				A7FD90EB2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodel */,
 			);
-			currentVersion = A79B802F2ABF5F3F0056C6FC /* SaDeBusinessCardScanner.xcdatamodel */;
+			currentVersion = A7FD90EB2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodel */;
 			path = SaDeBusinessCardScanner.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

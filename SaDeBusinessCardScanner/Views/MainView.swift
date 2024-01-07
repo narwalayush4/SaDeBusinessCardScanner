@@ -9,78 +9,158 @@ import SwiftUI
 import CoreData
 
 struct MainView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Card.entity(),
+                  sortDescriptors: [NSSortDescriptor(key: "timeStamp_", ascending: true)])
+    var cards: FetchedResults<Card>
+    
+    
+    @State private var searchText = ""
+    @State private var isDrawerOpen = false
+    @State var isLoading = true
+    private let width = UIScreen.main.bounds.width * 0.55
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+        NavigationStack {
+            if isLoading{
+                LoadingVIew()
+                    .onAppear(perform: {
+                        // Simulate loading delay (you can replace this with your actual loading logic)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            withAnimation {
+                                isLoading = false
+                            }
+                        }
+                    })
+            } else {
+                ZStack{
+                    VStack{
+                        NavBarView
+                        Spacer()
+                        VStack{
+                            if cards.isEmpty{
+                                Image("image1")
+                                    .resizable()
+                                    .frame(width: 200, height: 200)
+                                Text("Create your first Card Scan")
+                                    .foregroundStyle(Color("secondaryC"))
+                                    .fontWeight(.medium)
+                            } else {
+                                ScrollView {
+                                    VStack(spacing: 20.0) {
+                                        ForEach(cards){ card in
+                                            CardView(card: card)
+                                        }
+                                    }
+                                    .foregroundStyle(Color.black)
+                                }
+                            }
+                        }
+                        Spacer()
+                        TabBarView()
+                    }
+                    .background(Color.primaryC)
+                    .opacity(isDrawerOpen ? 0.7 : 1.0)
+                    .allowsHitTesting(!isDrawerOpen)
+                    if isDrawerOpen{
+                        HStack(spacing: 0){
+                            DrawerView
+                                .background(.white)
+                            Rectangle()
+                                .ignoresSafeArea()
+                                .foregroundStyle(Color.black)
+                                .opacity(0.3)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    withAnimation {
+                                        self.isDrawerOpen.toggle()
+                                    }
+                                }
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+        
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+extension MainView{
+    
+    var DrawerView: some View{
+        VStack(alignment: .leading, spacing: 20){
+            Image("logo_512x512")
+                .resizable()
+                .scaledToFit()
+                .frame(width: width)
+                .padding(.vertical)
+            Group{
+                NavigationLink(destination: GroupsView(), label: {
+                    HStack(spacing: 13){
+                        Image(systemName: "person.3")
+                        Text("Groups")
+                    }
+                })
+                NavigationLink(destination: QRScannerView(), label: {
+                    HStack(spacing: 27){
+                        Image(systemName: "star")
+                        Text("Rate Us")
+                    }
+                })
+                NavigationLink(destination: GroupsView(), label: {
+                    HStack(spacing: 30){
+                        Image(systemName: "square.and.arrow.up")
+                        Text("Share App")
+                    }
+                })
+                NavigationLink(destination: QRScannerView(), label: {
+                    HStack(spacing: 38){
+                        Image(systemName: "info")
+                        Text("Privacy Policy")
+                    }
+                })
+            }
+            .padding(.horizontal, 20)
+            Spacer()
+        }
+        .frame(width: width)
+        .animation(.default, value: 10)
+        .background(Color.primaryC)
+    }
+    
+    var NavBarView: some View {
+        VStack{
+            HStack(spacing: 8){
+                MenuButton
+                Spacer()
+                SearchBarView()
+            }
+        }
+        .padding()
+        .foregroundStyle(Color.white)
+        .background(Color("secondaryC").ignoresSafeArea(edges: .top))
+    }
+    
+    var MenuButton: some View {
+        Button(action: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                withAnimation {
+                    self.isDrawerOpen.toggle()
+                }
+            }
+        }, label: {
+            Image(systemName: "line.horizontal.3")
+                .resizable()
+                .frame(width: 18, height: 18)
+        })
+    }
+    
+    
+    
+}
+
 
 #Preview {
-    MainView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    MainView()
 }
