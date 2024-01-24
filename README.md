@@ -12,11 +12,11 @@ An iOS app that can scan, store, and share business cards
 - Tagging into groups
 
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <img src="IMG_5758.png" alt="Alt text for Image 1" height = 400px>
-    <img src="IMG_5762.png" alt="Alt text for Image 2" height = 400px>
-    <img src="IMG_5759.png" alt="Alt text for Image 2" height = 400px>
-    <img src="IMG_5761.png" alt="Alt text for Image 2" height = 400px>
+<div style="display: flex; justify-content: space-between;">
+    <img src="IMG_5758.PNG" alt="Alt text for Image 1" height = 500px>
+    <img src="IMG_5762.PNG" alt="Alt text for Image 2" height = 500px>
+    <img src="IMG_5759.PNG" alt="Alt text for Image 2" height = 500px>
+    <img src="IMG_5761.PNG" alt="Alt text for Image 2" height = 500px>
 </div>
 
 
