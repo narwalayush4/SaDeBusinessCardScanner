@@ -10,7 +10,7 @@ import SwiftUI
 struct GroupsView: View {
     
     @State private var isAlertPresented = false
-    @State private var newGroupName: STring = ""
+    @State private var newGroupName: String = ""
     
     var body: some View {
         VStack(spacing: 10, content: {

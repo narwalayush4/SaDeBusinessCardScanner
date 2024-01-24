@@ -12,9 +12,10 @@ import Dispatch
 struct FileSystem {
     
     let imagesDirectory: URL
-    init(){
+    init(){ 
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         imagesDirectory = documentsDirectory.appendingPathComponent("SaDe Business Card Scanner")
+        debugPrint(imagesDirectory)
         do {
             if !FileManager.default.fileExists(atPath: imagesDirectory.path) {
                 try FileManager.default.createDirectory(at: imagesDirectory, withIntermediateDirectories: true, attributes: nil)

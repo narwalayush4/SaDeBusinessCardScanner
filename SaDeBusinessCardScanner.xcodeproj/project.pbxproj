@@ -143,6 +143,7 @@
 		A73D052B2AE3790500223552 /* SubView-ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A7654BB72AFA629E00279B2B /* FileManager.swift */,
 			);
 			path = "SubView-ViewModels";
 			sourceTree = "<group>";
@@ -256,7 +257,6 @@
 				A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */,
 				A79B80682ABF61380056C6FC /* SettingsViewVM.swift */,
 				A73D052B2AE3790500223552 /* SubView-ViewModels */,
-				A7654BB72AFA629E00279B2B /* FileManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

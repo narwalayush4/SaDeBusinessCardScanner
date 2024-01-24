@@ -65,15 +65,17 @@ class TextRecognizer {
         if linesToKeep.count > 2 {
             card.name_ = linesToKeep[1]
         }
-        if linesToKeep.count > 2 {
+        if linesToKeep.count > 3 {
             card.jobTitle_ = linesToKeep[2]
         }
-        card.address1_ = linesToKeep[3]
-        if linesToKeep.count > 3 {
-            card.address2_ = linesToKeep[4]
-        }
         if linesToKeep.count > 4 {
-            card.address3_ = linesToKeep[5]
+            card.address2_ = linesToKeep[3]
+        }
+        if linesToKeep.count >  5 {
+            card.address2_ = linesToKeep[5]
+        }
+        if linesToKeep.count > 6 {
+            card.address3_ = linesToKeep[6]
         }
         card.timeStamp_ = Date()
         card.options = recognizedText

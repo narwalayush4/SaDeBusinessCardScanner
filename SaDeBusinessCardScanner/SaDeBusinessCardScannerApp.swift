@@ -26,9 +26,9 @@ struct SaDeBusinessCardScannerApp: App {
                 .onChange(of: scenePhase) {
                     let endTime = Date()
                     let elapsedTime = endTime.timeIntervalSince(startTime)
-                    debugPrint(startTime)
-                    debugPrint(endTime)
-                    debugPrint("Time from app launch to main view appearance: \(elapsedTime) seconds")
+//                    debugPrint(startTime)
+//                    debugPrint(endTime)
+//                    debugPrint("Time from app launch to main view appearance: \(elapsedTime) seconds")
                 }
         }
         .onChange(of: scenePhase) {
