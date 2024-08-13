@@ -265,16 +265,16 @@ struct CardDetailsView: View {
 }
 
 #Preview {
-    let previewContext = PersistenceController.preview.container.viewContext
-    let card = Card(context: previewContext)
-    card.name_ = "John Doe"
-    card.company_ = "Example Company"
-    card.jobTitle_ = "Software Engineer"
-    card.email_ = "john.doe@example.com"
-    card.phone_ = "1234567890"
-    card.website_ = "www.example.com"
-    card.address_ = "123 Main Street"
-    card.timeStamp_ = Date(timeIntervalSince1970: 60000)
+//    let previewContext = PersistenceController.preview.container.viewContext
+//    let card = Card(context: previewContext)
+//    card.name_ = "John Doe"
+//    card.company_ = "Example Company"
+//    card.jobTitle_ = "Software Engineer"
+//    card.email_ = "john.doe@example.com"
+//    card.phone_ = "1234567890"
+//    card.website_ = "www.example.com"
+//    card.address_ = "123 Main Street"
+//    card.timeStamp_ = Date(timeIntervalSince1970: 60000)
 
-    return CardDetailsView(card: card)
+    return CardDetailsView(card: Card.shared)
 }

@@ -36,6 +36,7 @@
 		A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80682ABF61380056C6FC /* SettingsViewVM.swift */; };
 		A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B806C2ABF6DD60056C6FC /* TabBarView.swift */; };
 		A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */; };
+		A7BE217B2BA9EB64008C7CE7 /* QRCodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BE217A2BA9EB64008C7CE7 /* QRCodeDetailView.swift */; };
 		A7DF7FCF2ACE7FA800B8D104 /* CardScannerView-temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF7FCE2ACE7FA800B8D104 /* CardScannerView-temp.swift */; };
 		A7F9E4BF2B17621300B1C8B3 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */; };
 		A7FD90EC2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7FD90EA2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld */; };
@@ -73,6 +74,7 @@
 		A79B80682ABF61380056C6FC /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
 		A79B806C2ABF6DD60056C6FC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextRecognizable.swift; sourceTree = "<group>"; };
+		A7BE217A2BA9EB64008C7CE7 /* QRCodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDetailView.swift; sourceTree = "<group>"; };
 		A7DF7FCE2ACE7FA800B8D104 /* CardScannerView-temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardScannerView-temp.swift"; sourceTree = "<group>"; };
 		A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		A7FD90EB2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaDeBusinessCardScanner.xcdatamodel; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				A70512A62B164FD400307B2A /* EditView.swift */,
 				A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */,
 				A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */,
+				A7BE217A2BA9EB64008C7CE7 /* QRCodeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				A79B80632ABF60FD0056C6FC /* SettingsView.swift in Sources */,
 				A79B805D2ABF60B70056C6FC /* CardScannerViewVM.swift in Sources */,
 				A7654BB82AFA629E00279B2B /* FileManager.swift in Sources */,
+				A7BE217B2BA9EB64008C7CE7 /* QRCodeDetailView.swift in Sources */,
 				A704DA7C2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift in Sources */,
 				A79B80672ABF61190056C6FC /* CardModel.swift in Sources */,
 				A767AF6A2B34DDF2001E5B8E /* CardScannerView.swift in Sources */,
@@ -455,12 +459,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTech.SaDeBusinessCardScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -490,12 +495,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTechs.SaDeBusinessCardScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTech.SaDeBusinessCardScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

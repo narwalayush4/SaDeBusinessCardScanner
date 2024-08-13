@@ -12,7 +12,8 @@ import Dispatch
 struct FileSystem {
     
     let imagesDirectory: URL
-    init(){ 
+    
+    init(){
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         imagesDirectory = documentsDirectory.appendingPathComponent("SaDe Business Card Scanner")
         debugPrint(imagesDirectory)
