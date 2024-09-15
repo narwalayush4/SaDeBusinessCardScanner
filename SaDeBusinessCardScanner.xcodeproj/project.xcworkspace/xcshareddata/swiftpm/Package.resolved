@@ -1,13 +1,13 @@
 {
-  "originHash" : "35ef7687595836465f1ca054f499e64759010bb9868580c5ab35bb9b24d414c3",
+  "originHash" : "d59e09a8199b37d3d5a58522f728dec08e73dbe61a82a172d7e664c8318d995d",
   "pins" : [
     {
-      "identity" : "swiftqrcodescanner",
+      "identity" : "codescanner",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vinodiOS/SwiftQRCodeScanner.git",
+      "location" : "https://github.com/twostraws/CodeScanner",
       "state" : {
-        "revision" : "fddcabcb431cd6110cea0394660082661dbafa7e",
-        "version" : "1.16.0"
+        "revision" : "34da57fb63b47add20de8a85da58191523ccce57",
+        "version" : "2.5.0"
       }
     }
   ],

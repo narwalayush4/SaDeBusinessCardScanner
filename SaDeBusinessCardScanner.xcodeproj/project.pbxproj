@@ -19,7 +19,6 @@
 		A7638F292AC3DA980037E292 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7638F282AC3DA980037E292 /* Group.swift */; };
 		A7654BB82AFA629E00279B2B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7654BB72AFA629E00279B2B /* FileManager.swift */; };
 		A767AF6A2B34DDF2001E5B8E /* CardScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767AF692B34DDF2001E5B8E /* CardScannerView.swift */; };
-		A76B25952C6BB05A006F76C3 /* SwiftQRCodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A76B25942C6BB05A006F76C3 /* SwiftQRCodeScanner */; };
 		A76B25972C6BB156006F76C3 /* QRCodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B25962C6BB156006F76C3 /* QRCodeDetailView.swift */; };
 		A7913C0E2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7913C0D2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift */; };
 		A79B80242ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */; };
@@ -37,6 +36,7 @@
 		A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80682ABF61380056C6FC /* SettingsViewVM.swift */; };
 		A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B806C2ABF6DD60056C6FC /* TabBarView.swift */; };
 		A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */; };
+		A7BE74FE2C9759270092E94E /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A7BE74FD2C9759270092E94E /* CodeScanner */; };
 		A7F9E4BF2B17621300B1C8B3 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */; };
 		A7FD90EC2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7FD90EA2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld */; };
 		A7FD90F22AF7BB8E0069024D /* Card+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD90F12AF7BB8E0069024D /* Card+helper.swift */; };
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76B25952C6BB05A006F76C3 /* SwiftQRCodeScanner in Frameworks */,
+				A7BE74FE2C9759270092E94E /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +220,7 @@
 			);
 			name = SaDeBusinessCardScanner;
 			packageProductDependencies = (
-				A76B25942C6BB05A006F76C3 /* SwiftQRCodeScanner */,
+				A7BE74FD2C9759270092E94E /* CodeScanner */,
 			);
 			productName = SaDeBusinessCardScanner;
 			productReference = A79B80202ABF5F3C0056C6FC /* SaDeBusinessCardScanner.app */;
@@ -251,7 +251,7 @@
 			);
 			mainGroup = A79B80172ABF5F3C0056C6FC;
 			packageReferences = (
-				A76B25932C6BB05A006F76C3 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */,
+				A7BE74FC2C9759270092E94E /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = A79B80212ABF5F3C0056C6FC /* Products */;
 			projectDirPath = "";
@@ -530,21 +530,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A76B25932C6BB05A006F76C3 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */ = {
+		A7BE74FC2C9759270092E94E /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vinodiOS/SwiftQRCodeScanner.git";
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.16.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A76B25942C6BB05A006F76C3 /* SwiftQRCodeScanner */ = {
+		A7BE74FD2C9759270092E94E /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A76B25932C6BB05A006F76C3 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */;
-			productName = SwiftQRCodeScanner;
+			package = A7BE74FC2C9759270092E94E /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 

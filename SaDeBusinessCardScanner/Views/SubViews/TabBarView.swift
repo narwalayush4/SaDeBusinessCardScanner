@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CodeScanner
 
 
 struct TabBarView: View {
@@ -22,7 +23,14 @@ struct TabBarView: View {
                     .frame(width: screenWidth, height: 80)
                     .foregroundStyle(Color("secondaryC"))
                 HStack{
-                    NavigationLink(destination: AddManuallyView()) { //TODO: change to qrscanner view
+                    NavigationLink(destination: CodeScannerView(codeTypes: [.qr], completion: { response in
+                        switch response {
+                            case .success(let result):
+                                print("Found code: \(result.string)")
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                    })) {
                         VStack(alignment: .center) {
                             Image(systemName: "qrcode.viewfinder")
                                 .resizable()

@@ -10,7 +10,7 @@ import Vision
 import VisionKit
 
 
-struct CardScannerView: UIViewControllerRepresentable{
+struct CardScannerView: UIViewControllerRepresentable {
     
     private let completionHandler: () -> Void
     @Binding var scannedCard: CardModel
