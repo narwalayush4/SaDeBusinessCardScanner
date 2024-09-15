@@ -12,10 +12,12 @@ import CodeScanner
 struct TabBarView: View {
     
     @Environment(\.managedObjectContext) var moc
+    let screenWidth = UIScreen.main.bounds.size.width * 0.9
     @State private var isCardDetailModifierPresented = false
     @State private var scannedCard = CardModel()
     @State private var isQRCodeScannerPresented: Bool = false
-    let screenWidth = UIScreen.main.bounds.size.width * 0.9
+    @State private var isAlertPresented = false
+    @State private var alertErrorText = ""
     
     var body: some View {
         NavigationStack {
@@ -82,68 +84,27 @@ struct TabBarView: View {
                         case .success(let result):
                             print("Found code: \(result.string)")
                             isQRCodeScannerPresented = false
+                            if parseContactData(qrCodeText: result.string) {
+                                print(scannedCard)
+                            } else {
+                                alertErrorText = "QR Code is not of the Contact card format."
+                                DispatchQueue.main.async { isAlertPresented = true }
+                            }
                         case .failure(let error):
                             print(error.localizedDescription)
+                            isAlertPresented = true
+                            alertErrorText = error.localizedDescription
                         }
                     })
                 })
-//                .sheet(isPresented: self.$isScannerPresented, content: {
-//                    CardScannerView(completionHandler: { cardData in
-//                        if let data = cardData {
-////                            let card = Card(context: managedObjectContext,
-////                                            email: data.email,
-////                                            website: data.website,
-////                                            phone:data.phone,
-////                                            company: data.company,
-////                                            name: data.name,
-////                                            jobTitle: data.jobTitle,
-////                                            address1: data.address1,
-////                                            address2: data.address2,
-////                                            address3: data.address3,
-////                                            timeStamp: data.timeStamp,
-////                                            filePath: data.filePath)
-//                            let card = Card(context: moc)
-//                            card.email_ = data.email_
-//                            card.website_ = data.website_
-//                            card.phone_ = data.phone_
-//                            card.company_ = data.company_
-//                            card.name_ =  data.name_
-//                            card.jobTitle_ = data.jobTitle_
-//                            card.address1_ =  data.address1_
-//                            card.address2_ = data.address2_
-//                            card.address3_ = data.address3_
-//                            card.timeStamp_ = data.timeStamp_
-//                            card.filePath_ = data.filePath_
-//                            
-//                            self.scannedCard = card
-//                            
-//                            //TODO: CHANGE
-//                            PersistenceController.preview.save()
-//                            
-//                            print(card.website_ )
-//                            print(card.email_)
-//                            print(card.phone_)
-//                            print(card)
-//                        }
-//                        self.isScannerPresented = false
-//                        self.isCardDetailModifierPresented = true
-//                    }, onCancel: {
-//                        self.isScannerPresented = false
-//                    })
-//                })
-//                .sheet(isPresented: self.$isScannerPresented, content: {
-//                    CardScannerView(completionHandler: {
-//                        self.isScannerPresented = false
-//                        self.isCardDetailModifierPresented = true
-//                    }, scannedCard: $scannedCard) {
-//                        self.isScannerPresented = false
-//                    }
-//                })
-//                .sheet(isPresented: self.$isCardDetailModifierPresented, content: {
-//                    NavigationView(content: {
-//                        EditView(card: scannedCard)
-//                    })
-//                })
+                .alert(isPresented: $isAlertPresented) {
+                    Alert(
+                        title: Text("Invalid QR Code"),
+                        message: Text(alertErrorText),
+                        dismissButton: .default(Text("OK"), action: { isAlertPresented = false })
+                    )
+                }
+                
                 HStack{
                     Rectangle()
                         .foregroundStyle(Color.clear)
@@ -165,85 +126,56 @@ struct TabBarView: View {
             }
         }
     }
+    
+    //MARK: - Scanned vCard/MeCard Parsing
+    func parseContactData(qrCodeText: String) -> Bool{
+        if qrCodeText.hasPrefix("BEGIN:VCARD") {
+            parseVCard(vCard: qrCodeText)
+            return true
+        } else if qrCodeText.hasPrefix("MECARD:") {
+            parseMeCard(meCard: qrCodeText)
+            return true
+        }
+        return false
+    }
+
+    func parseVCard(vCard: String) {
+        
+        let lines = vCard.split(separator: "\n")
+        
+        for line in lines {
+            if line.hasPrefix("FN:") {
+                let name = line.replacingOccurrences(of: "FN:", with: "")
+                scannedCard.name_ = name
+            } else if line.hasPrefix("TEL:") {
+                let phone = line.replacingOccurrences(of: "TEL:", with: "")
+                scannedCard.phone_ = phone
+            } else if line.hasPrefix("EMAIL:") {
+                let email = line.replacingOccurrences(of: "EMAIL:", with: "")
+                scannedCard.email_ = email
+            }
+        }
+        
+    }
+
+    func parseMeCard(meCard: String) {
+
+        
+        let meCardString = meCard.replacingOccurrences(of: "MECARD:", with: "")
+        let fields = meCardString.split(separator: ";")
+        
+        for field in fields {
+            if field.hasPrefix("N:") {
+                let name = field.replacingOccurrences(of: "N:", with: "")
+                scannedCard.name_ = name
+            } else if field.hasPrefix("TEL:") {
+                let phone = field.replacingOccurrences(of: "TEL:", with: "")
+                scannedCard.phone_ = phone
+            } else if field.hasPrefix("EMAIL:") {
+                let email = field.replacingOccurrences(of: "EMAIL:", with: "")
+                scannedCard.email_ = email
+            }
+        }
+    }
+
 }
-
-//#Preview {
-//    TabBarView(, scannedCard: Card())
-//}
-
-
-
-//                                VStack(alignment: .center, spacing: 6) {
-//                                    Image(systemName: "qrcode.viewfinder")
-//                                        .resizable()
-//                                        .scaledToFit()
-//                                        .frame(width: 25, height: 25)
-//                                    Text("QR Code")
-//                                        .font(.footnote)
-//                                }
-//                                .padding(.vertical, 10)
-//                                .foregroundStyle(.black)
-
-
-//                            Button {
-//                                //                QRScannerView()
-//                                //                    $viewModel.selectedTab = 1
-//                            } label: {
-//                                VStack(alignment: .center, spacing: 6) {
-//                                    Image(systemName: "qrcode.viewfinder")
-//                                        .resizable()
-//                                        .scaledToFit()
-//                                        .frame(width: 25, height: 25)
-//                                    Text("QR Code")
-//                                        .font(.callout)
-//                                }
-//                                .padding(.vertical, 10)
-//                                .foregroundStyle(Color("primaryC"))
-//                            }
-
-//                            Button {
-//                                //open cards
-//                                //                        $viewModel.selectedTab = 2
-//
-//                            } label: {
-//                                VStack(alignment: .center, spacing: 6) {
-//                                    Image("card-scan2")
-//                                        .renderingMode(.original)
-//                                        .resizable()
-//                                        .scaledToFit()
-//                                        .frame(width: 50, height: 50)
-//                                    Text("Business Card")
-//                                        .font(.system(size: 14))
-//                                        .offset(y: -10)
-//                                }
-//                                .padding(.vertical)
-//                                .foregroundStyle(Color("primaryC"))
-//                            }
-//                            .foregroundStyle(.black)
-
-//                                VStack(alignment: .center, spacing: 6) {
-//                                    Image("card")
-//                                        .resizable()
-//                                        .scaledToFit()
-//                                        .frame(width: 25, height: 25)
-//                                    Text("Create Manually")
-//                                        .font(.footnote)
-//                                }
-//                                .padding(.vertical, 10)
-//                                .foregroundStyle(.black)
-
-//                            Button {
-//                                //go to create manually
-//                                //                    selectedTab = 3
-//                            } label: {
-//
-//                                VStack(alignment: .center, spacing: 6) {
-//                                    Image("card")
-//                                        .resizable()
-//                                        .scaledToFit()
-//                                        .frame(width: 25, height: 25)
-//                                    Text("Create Manually")
-//                                        .font(.footnote)
-//                                }
-//                                .foregroundStyle(Color("primaryC"))
-//                            }
