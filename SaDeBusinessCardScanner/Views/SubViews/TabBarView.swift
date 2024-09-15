@@ -79,7 +79,7 @@ struct TabBarView: View {
                     }
                 }
                 .sheet(isPresented: self.$isQRCodeScannerPresented, content: {
-                    CodeScannerView(codeTypes: [.qr], completion: { response in
+                    CodeScannerView(codeTypes: [.qr], showViewfinder: true, completion: { response in
                         switch response {
                         case .success(let result):
                             print("Found code: \(result.string)")
