@@ -14,6 +14,7 @@ struct TabBarView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var isCardDetailModifierPresented = false
     @State private var scannedCard = CardModel()
+    @State private var isQRCodeScannerPresented: Bool = false
     let screenWidth = UIScreen.main.bounds.size.width * 0.9
     
     var body: some View {
@@ -23,14 +24,9 @@ struct TabBarView: View {
                     .frame(width: screenWidth, height: 80)
                     .foregroundStyle(Color("secondaryC"))
                 HStack{
-                    NavigationLink(destination: CodeScannerView(codeTypes: [.qr], completion: { response in
-                        switch response {
-                            case .success(let result):
-                                print("Found code: \(result.string)")
-                            case .failure(let error):
-                                print(error.localizedDescription)
-                            }
-                    })) {
+                    Button(action: {
+                        isQRCodeScannerPresented = true
+                    }, label: {
                         VStack(alignment: .center) {
                             Image(systemName: "qrcode.viewfinder")
                                 .resizable()
@@ -40,7 +36,18 @@ struct TabBarView: View {
                         }
                         .frame(width: screenWidth/3)
                         .foregroundStyle(Color("primaryC"))
-                    }
+                    })
+//                    NavigationLink(destination: ) {
+//                        VStack(alignment: .center) {
+//                            Image(systemName: "qrcode.viewfinder")
+//                                .resizable()
+//                                .frame(width: 25, height: 25)
+//                            Text("QR Code")
+//                                .font(.callout)
+//                        }
+//                        .frame(width: screenWidth/3)
+//                        .foregroundStyle(Color("primaryC"))
+//                    }
                     Button(action: {
 //                        isScannerPresented = true
                     }, label: {
@@ -69,6 +76,17 @@ struct TabBarView: View {
                         .foregroundStyle(Color("primaryC"))
                     }
                 }
+                .sheet(isPresented: self.$isQRCodeScannerPresented, content: {
+                    CodeScannerView(codeTypes: [.qr], completion: { response in
+                        switch response {
+                        case .success(let result):
+                            print("Found code: \(result.string)")
+                            isQRCodeScannerPresented = false
+                        case .failure(let error):
+                            print(error.localizedDescription)
+                        }
+                    })
+                })
 //                .sheet(isPresented: self.$isScannerPresented, content: {
 //                    CardScannerView(completionHandler: { cardData in
 //                        if let data = cardData {
