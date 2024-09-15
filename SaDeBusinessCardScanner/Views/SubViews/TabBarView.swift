@@ -22,7 +22,7 @@ struct TabBarView: View {
                     .frame(width: screenWidth, height: 80)
                     .foregroundStyle(Color("secondaryC"))
                 HStack{
-                    NavigationLink(destination: QRScannerView()) {
+                    NavigationLink(destination: AddManuallyView()) { //TODO: change to qrscanner view
                         VStack(alignment: .center) {
                             Image(systemName: "qrcode.viewfinder")
                                 .resizable()
