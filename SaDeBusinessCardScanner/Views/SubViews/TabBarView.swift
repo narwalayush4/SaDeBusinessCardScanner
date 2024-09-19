@@ -140,7 +140,6 @@ struct TabBarView: View {
     }
 
     func parseVCard(vCard: String) {
-        
         let lines = vCard.split(separator: "\n")
         
         for line in lines {
@@ -159,8 +158,6 @@ struct TabBarView: View {
     }
 
     func parseMeCard(meCard: String) {
-
-        
         let meCardString = meCard.replacingOccurrences(of: "MECARD:", with: "")
         let fields = meCardString.split(separator: ";")
         
