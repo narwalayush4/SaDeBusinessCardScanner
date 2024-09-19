@@ -17,6 +17,7 @@ struct TabBarView: View {
     @State private var scannedCard = CardModel()
     @State private var isQRCodeScannerPresented: Bool = false
     @State private var isAlertPresented = false
+    @State private var showAddManuallyView: Bool = false
     @State private var alertErrorText = ""
     
     var body: some View {
@@ -39,17 +40,6 @@ struct TabBarView: View {
                         .frame(width: screenWidth/3)
                         .foregroundStyle(Color("primaryC"))
                     })
-//                    NavigationLink(destination: ) {
-//                        VStack(alignment: .center) {
-//                            Image(systemName: "qrcode.viewfinder")
-//                                .resizable()
-//                                .frame(width: 25, height: 25)
-//                            Text("QR Code")
-//                                .font(.callout)
-//                        }
-//                        .frame(width: screenWidth/3)
-//                        .foregroundStyle(Color("primaryC"))
-//                    }
                     Button(action: {
 //                        isScannerPresented = true
                     }, label: {
@@ -64,7 +54,7 @@ struct TabBarView: View {
                         .frame(width: screenWidth/3)
                         .foregroundStyle(Color("primaryC"))
                     })
-                    NavigationLink(destination: AddManuallyView()) {
+                    NavigationLink(destination: AddManuallyView(scannedCard: .constant(CardModel()))) {
                         VStack(alignment: .center) {
                             Image("card")
                                 .resizable()
@@ -85,7 +75,7 @@ struct TabBarView: View {
                             print("Found code: \(result.string)")
                             isQRCodeScannerPresented = false
                             if parseContactData(qrCodeText: result.string) {
-                                print(scannedCard)
+                                showAddManuallyView = true
                             } else {
                                 alertErrorText = "QR Code is not of the Contact card format."
                                 DispatchQueue.main.async { isAlertPresented = true }
@@ -96,6 +86,19 @@ struct TabBarView: View {
                             alertErrorText = error.localizedDescription
                         }
                     })
+                })
+                .fullScreenCover(isPresented: $showAddManuallyView, content: {
+                    NavigationStack{
+                        AddManuallyView(scannedCard: $scannedCard)
+                            .navigationBarTitleDisplayMode(.inline)
+                            .toolbar {
+                                ToolbarItem(placement: .navigationBarLeading) {
+                                    Button("Back") {
+                                        showAddManuallyView = false
+                                    }
+                                }
+                            }
+                    }
                 })
                 .alert(isPresented: $isAlertPresented) {
                     Alert(
@@ -146,15 +149,30 @@ struct TabBarView: View {
             if line.hasPrefix("FN:") {
                 let name = line.replacingOccurrences(of: "FN:", with: "")
                 scannedCard.name_ = name
+            } else if line.hasPrefix("ORG:") {
+                let company = line.replacingOccurrences(of: "ORG:", with: "")
+                scannedCard.company_ = company
+            } else if line.hasPrefix("TITLE:") {
+                let jobTitle = line.replacingOccurrences(of: "TITLE:", with: "")
+                scannedCard.jobTitle_ = jobTitle
             } else if line.hasPrefix("TEL:") {
                 let phone = line.replacingOccurrences(of: "TEL:", with: "")
                 scannedCard.phone_ = phone
             } else if line.hasPrefix("EMAIL:") {
                 let email = line.replacingOccurrences(of: "EMAIL:", with: "")
                 scannedCard.email_ = email
+            } else if line.hasPrefix("ADR:") {
+                let addressComponents = line.replacingOccurrences(of: "ADR:", with: "").split(separator: ";")
+                if addressComponents.count >= 3 {
+                    scannedCard.address1_ = String(addressComponents[0])
+                    scannedCard.address2_ = String(addressComponents[1])
+                    scannedCard.address3_ = String(addressComponents[2])
+                }
+            } else if line.hasPrefix("URL:") {
+                let website = line.replacingOccurrences(of: "URL:", with: "")
+                scannedCard.website_ = website
             }
         }
-        
     }
 
     func parseMeCard(meCard: String) {
@@ -165,14 +183,31 @@ struct TabBarView: View {
             if field.hasPrefix("N:") {
                 let name = field.replacingOccurrences(of: "N:", with: "")
                 scannedCard.name_ = name
+            } else if field.hasPrefix("ORG:") {
+                let company = field.replacingOccurrences(of: "ORG:", with: "")
+                scannedCard.company_ = company
             } else if field.hasPrefix("TEL:") {
                 let phone = field.replacingOccurrences(of: "TEL:", with: "")
                 scannedCard.phone_ = phone
             } else if field.hasPrefix("EMAIL:") {
                 let email = field.replacingOccurrences(of: "EMAIL:", with: "")
                 scannedCard.email_ = email
+            } else if field.hasPrefix("ADR:") {
+                let addressComponents = field.replacingOccurrences(of: "ADR:", with: "").split(separator: ",")
+                if addressComponents.count >= 3 {
+                    scannedCard.address1_ = String(addressComponents[0])
+                    scannedCard.address2_ = String(addressComponents[1])
+                    scannedCard.address3_ = String(addressComponents[2])
+                }
+            } else if field.hasPrefix("URL:") {
+                let website = field.replacingOccurrences(of: "URL:", with: "")
+                scannedCard.website_ = website
             }
         }
+        print("this is mecard\(scannedCard)")
     }
+}
 
+#Preview {
+    TabBarView()
 }
