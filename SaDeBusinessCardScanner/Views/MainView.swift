@@ -102,7 +102,7 @@ extension MainView{
                         Text("Groups")
                     }
                 })
-                NavigationLink(destination: AddManuallyView(), label: {
+                NavigationLink(destination: GroupsView(), label: {
                     HStack(spacing: 27){
                         Image(systemName: "star")
                         Text("Rate Us")
@@ -114,7 +114,7 @@ extension MainView{
                         Text("Share App")
                     }
                 })
-                NavigationLink(destination: AddManuallyView(), label: {
+                NavigationLink(destination: GroupsView(), label: {
                     HStack(spacing: 38){
                         Image(systemName: "info")
                         Text("Privacy Policy")
