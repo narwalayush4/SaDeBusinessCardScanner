@@ -12,6 +12,7 @@
 		A710E0F42AC7510200808354 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710E0F32AC7510200808354 /* SideBarView.swift */; };
 		A7128ECC2B4640D10076CD8F /* LoadingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */; };
 		A71A2A042C9DF77000D73FF8 /* QRDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A2A032C9DF76A00D73FF8 /* QRDetailView.swift */; };
+		A71A2A062C9E092600D73FF8 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */; };
 		A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71B699C2AC4671B0010A31A /* NavBarView.swift */; };
 		A7380AA92AFE26AB00FEBD08 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */; };
 		A7380AAA2AFE26AB00FEBD08 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */; };
@@ -47,6 +48,7 @@
 		A710E0F32AC7510200808354 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVIew.swift; sourceTree = "<group>"; };
 		A71A2A032C9DF76A00D73FF8 /* QRDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetailView.swift; sourceTree = "<group>"; };
+		A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		A71B699C2AC4671B0010A31A /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataClass.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataProperties.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		A736B8042ACC5EC300F8FF0F /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */,
 				A79B80642ABF610F0056C6FC /* CardView.swift */,
 				A79B806C2ABF6DD60056C6FC /* TabBarView.swift */,
 				A71B699C2AC4671B0010A31A /* NavBarView.swift */,
@@ -298,6 +301,7 @@
 				A704DA7C2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift in Sources */,
 				A79B80672ABF61190056C6FC /* CardModel.swift in Sources */,
 				A767AF6A2B34DDF2001E5B8E /* CardScannerView.swift in Sources */,
+				A71A2A062C9E092600D73FF8 /* ShareSheetView.swift in Sources */,
 				A7481C592B38465C00851887 /* AddManuallyView.swift in Sources */,
 				A79B80242ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift in Sources */,
 				A79B80652ABF610F0056C6FC /* CardView.swift in Sources */,

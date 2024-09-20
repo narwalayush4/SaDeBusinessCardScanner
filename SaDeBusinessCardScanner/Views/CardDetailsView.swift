@@ -12,6 +12,7 @@ struct CardDetailsView: View {
     var card: Card
     let fileManager = FileSystem()
     let screenWidth = UIScreen.main.bounds.size.width * 0.7
+    @State private var isShowingShareSheet = false
     private var image: UIImage {
         return fileManager.retrieveImage(from: card.timeStamp_) ?? UIImage(named: "logo_512x512")!
     }
@@ -43,11 +44,13 @@ struct CardDetailsView: View {
                                 RoundedRectangle(cornerRadius: 10.0)
                                     .foregroundStyle(Color.primaryC)
                                 HStack{
-                                    VStack{
-                                        Image(systemName: "square.and.arrow.up")
-                                        Text("Share")
+                                    Button(action: { isShowingShareSheet = true }){
+                                        VStack{
+                                            Image(systemName: "square.and.arrow.up")
+                                            Text("Share")
+                                        }
+                                        .frame(width: screenWidth*0.45)
                                     }
-                                    .frame(width: screenWidth*0.45)
                                     Rectangle()
                                         .frame(width: 1)
                                     VStack{
@@ -56,6 +59,7 @@ struct CardDetailsView: View {
                                     }
                                     .frame(width: screenWidth*0.55)
                                 }
+                                .foregroundStyle(.blue)
                                 .padding()
                             }
                         }
@@ -245,8 +249,13 @@ struct CardDetailsView: View {
 
                 }
             }
-
         }
+        .sheet(isPresented: $isShowingShareSheet, onDismiss: {
+            isShowingShareSheet = false
+        }, content: {
+            ShareSheetView(activityItems: [card.name_, image])
+                .presentationDetents([.medium])
+        })
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing){
                 NavigationLink(destination: EditView(card: card)) {

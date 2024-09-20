@@ -14,6 +14,7 @@ struct CardView: View {
     @State var card: Card
     @State private var isEditing = false
     @State private var isAlertPresented = false
+    @State private var isShowingShareSheet = false
     private var image: UIImage {
         return card.fetchImage(fileManager: fileManager)
     }
@@ -41,6 +42,15 @@ struct CardView: View {
                     }
                     .padding()
                     Spacer()
+                    Button(action: {
+                        isShowingShareSheet = true
+                    }) {
+                        Image(systemName: "square.and.arrow.up")
+                            .resizable()
+                            .frame(width: 22, height: 30)
+                            .offset(y: -2)
+                            .foregroundStyle(.blue)
+                    }
                     Menu {
                         NavigationLink(destination: EditView(card: card)) {
                             Text("Edit")
@@ -60,10 +70,17 @@ struct CardView: View {
                         Image(systemName: "ellipsis.circle")
                             .resizable()
                             .frame(width: 25, height: 25)
+                            .foregroundStyle(.blue)
                     }
                     .padding()
                 }
             }
+            .sheet(isPresented: $isShowingShareSheet, onDismiss: {
+                isShowingShareSheet = false
+            }, content: {
+                ShareSheetView(activityItems: [card.name_, image])
+                    .presentationDetents([.medium])
+            })
             .alert("Delete Card", isPresented: $isAlertPresented, actions: {
                 Button("Delete", role: .destructive) {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
