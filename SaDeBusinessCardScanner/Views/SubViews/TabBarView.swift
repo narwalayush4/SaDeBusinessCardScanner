@@ -40,9 +40,7 @@ struct TabBarView: View {
                         .frame(width: screenWidth/3)
                         .foregroundStyle(Color("primaryC"))
                     })
-                    Button(action: {
-//                        isScannerPresented = true
-                    }, label: {
+                    NavigationLink(destination: AddManuallyView(isScannerPresented: true)) {
                         VStack(alignment: .center) {
                             Image(systemName: "doc.viewfinder")
                                 .resizable()
@@ -53,7 +51,7 @@ struct TabBarView: View {
                         }
                         .frame(width: screenWidth/3)
                         .foregroundStyle(Color("primaryC"))
-                    })
+                    }
                     NavigationLink(destination: AddManuallyView()) {
                         VStack(alignment: .center) {
                             Image("card")
