@@ -80,9 +80,9 @@ struct CardScannerView: UIViewControllerRepresentable {
     }
 }
 
-#Preview{
-    func completionHandler(){}
-    func onCancel(){}
-    return CardScannerView(completionHandler: completionHandler, scannedCard: .constant(CardModel()), onCancel: onCancel)
-}
+//#Preview{
+//    func completionHandler(){}
+//    func onCancel(){}
+//    return CardScannerView(completionHandler: completionHandler, scannedCard: .constant(CardModel()), onCancel: onCancel)
+//}
 
