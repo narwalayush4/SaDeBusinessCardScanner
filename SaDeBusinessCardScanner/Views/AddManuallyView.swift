@@ -13,7 +13,7 @@ struct AddManuallyView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
     @State private var isScannerPresented = false
-    @Binding var scannedCard: CardModel
+    @State private var scannedCard = CardModel()
     let fileManager = FileSystem()
     @State private var image: UIImage? = nil
     
@@ -159,6 +159,6 @@ extension AddManuallyView{
 }
 
 #Preview {
-    AddManuallyView(scannedCard: .constant(CardModel()))
+    AddManuallyView()
 }
 

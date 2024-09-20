@@ -54,7 +54,7 @@ struct TabBarView: View {
                         .frame(width: screenWidth/3)
                         .foregroundStyle(Color("primaryC"))
                     })
-                    NavigationLink(destination: AddManuallyView(scannedCard: .constant(CardModel()))) {
+                    NavigationLink(destination: AddManuallyView()) {
                         VStack(alignment: .center) {
                             Image("card")
                                 .resizable()
@@ -89,7 +89,7 @@ struct TabBarView: View {
                 })
                 .fullScreenCover(isPresented: $showAddManuallyView, content: {
                     NavigationStack{
-                        AddManuallyView(scannedCard: $scannedCard)
+                        AddManuallyView()
                             .navigationBarTitleDisplayMode(.inline)
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarLeading) {
