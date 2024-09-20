@@ -30,7 +30,7 @@ extension Card {
         if let image = fileManager.retrieveImage(from: timeStamp_) {
             return image
         } else {
-            return UIImage(systemName: "photo.artframe")!
+            return UIImage(named: "logo_512x512")!
         }
     }
 }

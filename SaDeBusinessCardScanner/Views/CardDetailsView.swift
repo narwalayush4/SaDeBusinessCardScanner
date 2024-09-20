@@ -13,7 +13,7 @@ struct CardDetailsView: View {
     let fileManager = FileSystem()
     let screenWidth = UIScreen.main.bounds.size.width * 0.7
     private var image: UIImage {
-        return fileManager.retrieveImage(from: card.timeStamp_) ?? UIImage()
+        return fileManager.retrieveImage(from: card.timeStamp_) ?? UIImage("logo_512x512")
     }
     
     var body: some View {

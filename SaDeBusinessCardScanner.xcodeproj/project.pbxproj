@@ -11,6 +11,7 @@
 		A70512A72B164FD400307B2A /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70512A62B164FD400307B2A /* EditView.swift */; };
 		A710E0F42AC7510200808354 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710E0F32AC7510200808354 /* SideBarView.swift */; };
 		A7128ECC2B4640D10076CD8F /* LoadingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */; };
+		A71A2A042C9DF77000D73FF8 /* QRDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A2A032C9DF76A00D73FF8 /* QRDetailView.swift */; };
 		A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71B699C2AC4671B0010A31A /* NavBarView.swift */; };
 		A7380AA92AFE26AB00FEBD08 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */; };
 		A7380AAA2AFE26AB00FEBD08 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */; };
@@ -45,6 +46,7 @@
 		A70512A62B164FD400307B2A /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		A710E0F32AC7510200808354 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVIew.swift; sourceTree = "<group>"; };
+		A71A2A032C9DF76A00D73FF8 /* QRDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetailView.swift; sourceTree = "<group>"; };
 		A71B699C2AC4671B0010A31A /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataClass.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataProperties.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		A79B80542ABF5FF40056C6FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A71A2A032C9DF76A00D73FF8 /* QRDetailView.swift */,
 				A736B8042ACC5EC300F8FF0F /* SubViews */,
 				A79B80252ABF5F3C0056C6FC /* MainView.swift */,
 				A7481C582B38465C00851887 /* AddManuallyView.swift */,
@@ -285,6 +288,7 @@
 				A7FD90EC2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld in Sources */,
 				A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */,
 				A7913C0E2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift in Sources */,
+				A71A2A042C9DF77000D73FF8 /* QRDetailView.swift in Sources */,
 				A7F9E4BF2B17621300B1C8B3 /* CardDetailsView.swift in Sources */,
 				A7638F252AC3D90A0037E292 /* GroupsView.swift in Sources */,
 				A79B80262ABF5F3C0056C6FC /* MainView.swift in Sources */,

@@ -17,7 +17,7 @@ struct TabBarView: View {
     @State private var scannedCard = CardModel()
     @State private var isQRCodeScannerPresented: Bool = false
     @State private var isAlertPresented = false
-    @State private var showAddManuallyView: Bool = false
+    @State private var showQRDetailView: Bool = false
     @State private var alertErrorText = ""
     
     var body: some View {
@@ -75,7 +75,7 @@ struct TabBarView: View {
                             print("Found code: \(result.string)")
                             isQRCodeScannerPresented = false
                             if parseContactData(qrCodeText: result.string) {
-                                showAddManuallyView = true
+                                showQRDetailView = true
                             } else {
                                 alertErrorText = "QR Code is not of the Contact card format."
                                 DispatchQueue.main.async { isAlertPresented = true }
@@ -87,14 +87,14 @@ struct TabBarView: View {
                         }
                     })
                 })
-                .fullScreenCover(isPresented: $showAddManuallyView, content: {
+                .fullScreenCover(isPresented: $showQRDetailView, content: {
                     NavigationStack{
-                        AddManuallyView()
+                        QRDetailView(scannedCard: $scannedCard)
                             .navigationBarTitleDisplayMode(.inline)
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarLeading) {
                                     Button("Back") {
-                                        showAddManuallyView = false
+                                        showQRDetailView = false
                                     }
                                 }
                             }
