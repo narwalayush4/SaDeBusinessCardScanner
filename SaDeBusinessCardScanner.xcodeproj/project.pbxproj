@@ -450,6 +450,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SaDeBusinessCardScanner/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "We need access to your contacts to save new entries.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -486,6 +487,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SaDeBusinessCardScanner/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "We need access to your contacts to save new entries.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

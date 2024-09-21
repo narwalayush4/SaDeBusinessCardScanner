@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Contacts
 
 struct CardDetailsView: View {
     
@@ -13,6 +14,8 @@ struct CardDetailsView: View {
     let fileManager = FileSystem()
     let screenWidth = UIScreen.main.bounds.size.width * 0.7
     @State private var isShowingShareSheet = false
+    @State private var showAlert = false
+    @State private var alertMessage = ""
     private var image: UIImage {
         return fileManager.retrieveImage(from: card.timeStamp_) ?? UIImage(named: "logo_512x512")!
     }
@@ -53,11 +56,13 @@ struct CardDetailsView: View {
                                     }
                                     Rectangle()
                                         .frame(width: 1)
-                                    VStack{
-                                        Image(systemName: "person.crop.circle.fill.badge.plus")
-                                        Text("Add to Contacts")
+                                    Button { addToContacts() } label: {
+                                        VStack{
+                                            Image(systemName: "person.crop.circle.fill.badge.plus")
+                                            Text("Add to Contacts")
+                                        }
+                                        .frame(width: screenWidth*0.55)
                                     }
-                                    .frame(width: screenWidth*0.55)
                                 }
                                 .foregroundStyle(.blue)
                                 .padding()
@@ -268,22 +273,58 @@ struct CardDetailsView: View {
                 }
             }
         })
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Contact Status"),
+                message: Text(alertMessage),
+                dismissButton: .default(Text("OK")) {
+                    showAlert = false
+                }
+            )
+        }
         .frame(maxWidth: .infinity)
         .background(Color.primaryC)
     }
 }
 
-#Preview {
-//    let previewContext = PersistenceController.preview.container.viewContext
-//    let card = Card(context: previewContext)
-//    card.name_ = "John Doe"
-//    card.company_ = "Example Company"
-//    card.jobTitle_ = "Software Engineer"
-//    card.email_ = "john.doe@example.com"
-//    card.phone_ = "1234567890"
-//    card.website_ = "www.example.com"
-//    card.address_ = "123 Main Street"
-//    card.timeStamp_ = Date(timeIntervalSince1970: 60000)
+extension CardDetailsView {
+    
+    private func addToContacts() {
+        let newContact = CNMutableContact()
+        newContact.givenName = card.name_
+        if !card.phone_.isEmpty {
+            let phoneNumber = CNLabeledValue(label: CNLabelPhoneNumberMain, value: CNPhoneNumber(stringValue: card.phone_))
+            newContact.phoneNumbers = [phoneNumber]
+        }
+        if !card.email_.isEmpty {
+            let email = CNLabeledValue(label: CNLabelHome, value: card.email_ as NSString)
+            newContact.emailAddresses = [email]
+        }
+        newContact.jobTitle = card.jobTitle_
+        newContact.organizationName = card.company_
+        if !card.website_.isEmpty {
+            let urlAddress = CNLabeledValue(label: CNLabelURLAddressHomePage, value: card.website_ as NSString)
+            newContact.urlAddresses = [urlAddress]
+        }
+        if !card.address_.isEmpty {
+            let homeAddress = CNMutablePostalAddress()
+            homeAddress.street = card.address_ // Assuming this is a single line address
+            newContact.postalAddresses = [CNLabeledValue(label: CNLabelHome, value: homeAddress as CNPostalAddress)]
+        }
+        
+        let store = CNContactStore()
+        let request = CNSaveRequest()
+        request.add(newContact, toContainerWithIdentifier: nil)
+        do {
+            try store.execute(request)
+            alertMessage = "Contact saved successfully"
+        } catch {
+            alertMessage = "Error saving contact: \(error.localizedDescription)"
+        }
+        showAlert = true
+    }
+}
 
+#Preview {
     return CardDetailsView(card: Card.shared)
 }
