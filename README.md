@@ -21,3 +21,8 @@ An iOS app that can scan, store, and share business cards
 
 
 
+
+https://github.com/user-attachments/assets/91f12b21-a9bf-4aa5-9e4c-c4ec68f5fbbd
+
+
+
