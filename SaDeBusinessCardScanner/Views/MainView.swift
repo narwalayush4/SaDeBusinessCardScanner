@@ -36,7 +36,7 @@ struct MainView: View {
             } else {
                 ZStack{
                     VStack{
-                        NavBarView
+                        NavBarView()
                         Spacer()
                         VStack{
                             if cards.isEmpty{
@@ -128,36 +128,6 @@ extension MainView{
         .animation(.default, value: 10)
         .background(Color.primaryC)
     }
-    
-    var NavBarView: some View {
-        VStack{
-            HStack(spacing: 8){
-                MenuButton
-                Spacer()
-                SearchBarView()
-            }
-        }
-        .padding()
-        .foregroundStyle(Color.white)
-        .background(Color("secondaryC").ignoresSafeArea(edges: .top))
-    }
-    
-    var MenuButton: some View {
-        Button(action: {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                withAnimation {
-                    self.isDrawerOpen.toggle()
-                }
-            }
-        }, label: {
-            Image(systemName: "line.horizontal.3")
-                .resizable()
-                .frame(width: 18, height: 18)
-        })
-    }
-    
-    
-    
 }
 
 
