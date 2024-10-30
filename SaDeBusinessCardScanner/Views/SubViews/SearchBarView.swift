@@ -17,6 +17,8 @@ struct SearchBarView: View {
                 .foregroundStyle(Color("secondaryC"))
             TextField("Search Your Card", text: $searchText)
                 .foregroundStyle(Color(uiColor: .black))
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
             Button(action: {
                 searchText = ""
             }) {
@@ -31,5 +33,6 @@ struct SearchBarView: View {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color(.systemGray6))
         )
+        .animation(.default, value: searchText)
     }
 }
