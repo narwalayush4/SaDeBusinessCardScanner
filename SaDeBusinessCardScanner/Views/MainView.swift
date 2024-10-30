@@ -25,18 +25,14 @@ struct MainView: View {
         NavigationStack {
             if isLoading{
                 LoadingVIew()
-                    .onAppear(perform: {
-                        // Simulate loading delay (you can replace this with your actual loading logic)
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            withAnimation {
-                                isLoading = false
-                            }
-                        }
-                    })
+                    .onAppear(perform: { isLoading = false })
             } else {
                 ZStack{
                     VStack{
-                        NavBarView()
+                        NavBarView(searchText: $searchText)
+                            .onChange(of: searchText) {
+                                handleSearch()
+                            }
                         Spacer()
                         VStack{
                             if cards.isEmpty{

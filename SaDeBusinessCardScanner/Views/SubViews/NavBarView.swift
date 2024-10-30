@@ -10,6 +10,7 @@ import SwiftUI
 struct NavBarView: View {
     
     @State private var isDrawerOpen = false
+    @Binding var searchText: String
     private let width = UIScreen.main.bounds.width * 0.4
     
     var body: some View {
@@ -17,7 +18,7 @@ struct NavBarView: View {
             HStack(spacing: 8){
                 menuButton
                 Spacer()
-                SearchBarView()
+                SearchBarView(searchText: $searchText)
             }
         }
         .padding()
@@ -50,5 +51,5 @@ extension NavBarView {
 }
 
 #Preview {
-    NavBarView()
+    NavBarView(searchText: .constant(""))
 }
