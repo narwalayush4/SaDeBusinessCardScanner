@@ -21,6 +21,19 @@ struct MainView: View {
     @State var isLoading = true
     private let width = UIScreen.main.bounds.width * 0.55
     
+    private var filteredCards: [Card] {
+        if searchText.isEmpty {
+            return Array(cards)
+        }
+        
+        return cards.filter { card in
+            let searchString = searchText.lowercased()
+            return card.name_.lowercased().contains(searchString) ||
+                   card.company_.lowercased().contains(searchString) ||
+                   card.address_.lowercased().contains(searchString)
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             if isLoading{
@@ -30,9 +43,6 @@ struct MainView: View {
                 ZStack{
                     VStack{
                         NavBarView(searchText: $searchText)
-                            .onChange(of: searchText) {
-                                handleSearch()
-                            }
                         Spacer()
                         VStack{
                             if cards.isEmpty{
@@ -45,7 +55,7 @@ struct MainView: View {
                             } else {
                                 ScrollView {
                                     VStack(spacing: 20.0) {
-                                        ForEach(cards){ card in
+                                        ForEach(filteredCards) { card in
                                             CardView(card: card)
                                         }
                                     }
