@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NavBarView: View {
     
-    @State private var isDrawerOpen = false
+    @Binding var isDrawerOpen: Bool
     @Binding var searchText: String
     private let width = UIScreen.main.bounds.width * 0.4
     
@@ -51,5 +51,5 @@ extension NavBarView {
 }
 
 #Preview {
-    NavBarView(searchText: .constant(""))
+    NavBarView(isDrawerOpen: .constant(false), searchText: .constant(""))
 }
