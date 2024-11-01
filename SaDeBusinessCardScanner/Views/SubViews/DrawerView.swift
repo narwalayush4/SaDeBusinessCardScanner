@@ -20,38 +20,40 @@ struct DrawerView: View{
                 .scaledToFit()
                 .frame(width: width)
                 .padding(.vertical)
-            Group{
-                NavigationLink(destination: GroupsView(), label: {
-                    HStack(spacing: 13){
-                        Image(systemName: "person.3")
-                        Text("Groups")
-                    }
-                })
-                Button(action: {
-                    isDrawerOpen = false
-                    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                        SKStoreReviewController.requestReview(in: windowScene)
-                    }
-                }) {
-                    HStack(spacing: 27){
-                        Image(systemName: "star")
-                        Text("Rate Us")
-                    }
+            
+            NavigationLink(destination: GroupsView(), label: {
+                HStack(spacing: 13){
+                    Image(systemName: "person.3")
+                    Text("Groups")
                 }
-                NavigationLink(destination: GroupsView(), label: {
-                    HStack(spacing: 30){
-                        Image(systemName: "square.and.arrow.up")
-                        Text("Share App")
-                    }
-                })
-                NavigationLink(destination: GroupsView(), label: {
-                    HStack(spacing: 38){
-                        Image(systemName: "info")
-                        Text("Privacy Policy")
-                    }
-                })
+                .padding(.horizontal, 20)
+            })
+            Button(action: {
+                isDrawerOpen = false
+                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                    SKStoreReviewController.requestReview(in: windowScene)
+                }
+            }) {
+                HStack(spacing: 27){
+                    Image(systemName: "star")
+                    Text("Rate Us")
+                }
+                .padding(.horizontal, 20)
             }
-            .padding(.horizontal, 20)
+            NavigationLink(destination: GroupsView(), label: {
+                HStack(spacing: 30){
+                    Image(systemName: "square.and.arrow.up")
+                    Text("Share App")
+                }
+                .padding(.horizontal, 20)
+            })
+            NavigationLink(destination: GroupsView(), label: {
+                HStack(spacing: 38){
+                    Image(systemName: "info")
+                    Text("Privacy Policy")
+                }
+                .padding(.horizontal, 20)
+            })
             Spacer()
         }
         .frame(width: width)

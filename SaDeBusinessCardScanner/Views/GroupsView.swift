@@ -11,90 +11,71 @@ struct GroupsView: View {
     
     @State private var isAlertPresented = false
     @State private var newGroupName: String = ""
+    @State private var groups: [Group] = [
+        Group(name: "Family"),
+        Group(name: "Business"),
+        Group(name: "Customer"),
+        Group(name: "Office"),
+        Group(name: "Friends"),
+        Group(name: "VIP")
+    ]
     
     var body: some View {
-        VStack(spacing: 10, content: {
-//            HStack(spacing: 8){
-//                Button(action: {}, label: {
-//                    Image(systemName: "arrow.backward")
-//                        .resizable()
-//                        .frame(width: 18, height: 18)
-//                        .padding()
-//                })
-//                Text("Groups")
-//                    .font(.title)
-//                Spacer()
-//            }
-//            .padding()
-//            .foregroundStyle(Color.white)
-//            .background(Color("secondaryC").ignoresSafeArea(edges: .all))
-            HStack(spacing: 5) {
-                CellView(name: "Family")
-                CellView(name: "Business")
-            }.safeAreaPadding(.horizontal)
-            HStack {
-                CellView(name: "Customer")
-                CellView(name: "Office")
-            }.safeAreaPadding(.horizontal)
-            HStack {
-                CellView(name: "Friends")
-                CellView(name: "VIP")
-            }.safeAreaPadding(.horizontal)
-            HStack{
-                RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
-                    .foregroundStyle(Color(uiColor: .lightGray))
-                    .opacity(0.5)
-                    .frame(height: 2)
-                Text("Your Groups")
-                    .foregroundStyle(Color(uiColor: .lightGray))
-                RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
-                    .foregroundStyle(Color(uiColor: .lightGray))
-                    .frame(height: 2)
-                    .opacity(0.5)
-            }.safeAreaPadding(.horizontal)
-            Spacer()
-        })
-        .toolbar(content: {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button(action: {
-                    isAlertPresented = true
-                }, label: {
-                    Text("Create")
-                })
+        NavigationView {
+            VStack(spacing: 10) {
+                ForEach(0..<3) { row in
+                    HStack(spacing: 5) {
+                        ForEach(0..<2) { col in
+                            let index = row * 2 + col
+                            if index < groups.count {
+                                NavigationLink(destination: GroupDetailView(group: groups[index])) {
+                                    GroupCellView(name: groups[index].name, count: groups[index].cards.count)
+                                }
+                            }
+                        }
+                    }.safeAreaPadding(.horizontal)
+                }
+                
+                HStack {
+                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
+                        .foregroundStyle(Color(uiColor: .lightGray))
+                        .opacity(0.5)
+                        .frame(height: 2)
+                    Text("Your Groups")
+                        .foregroundStyle(Color(uiColor: .lightGray))
+                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
+                        .foregroundStyle(Color(uiColor: .lightGray))
+                        .frame(height: 2)
+                        .opacity(0.5)
+                }.safeAreaPadding(.horizontal)
+                
+                Spacer()
             }
-        })
-        .background(Color("primaryC"))
+            .background(Color("primaryC"))
+            .navigationTitle("Groups")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        isAlertPresented = true
+                    }) {
+                        Text("Create")
+                    }
+                }
+            }
+            .alert("Create New Group", isPresented: $isAlertPresented) {
+                TextField("Group Name", text: $newGroupName)
+                Button("Create") {
+                    if !newGroupName.isEmpty {
+                        groups.append(Group(name: newGroupName))
+                        newGroupName = ""
+                    }
+                }
+                Button("Cancel", role: .cancel) {}
+            }
+        }
     }
 }
 
 #Preview {
     GroupsView()
-}
-
-struct CellView:View {
-    
-    var name = ""
-    
-    var body:some View{
-        ZStack {
-            RoundedRectangle(cornerSize: CGSize(width: 20,height: 20))
-                .foregroundStyle(.white)
-                .frame(height: UIScreen.main.bounds.height/7)
-            VStack{
-                HStack {
-                    Text("00")
-                        .fontDesign(.monospaced)
-                        .font(.system(size: 40))
-                        .foregroundStyle(.blue)
-                    Spacer()
-                }.padding(.horizontal)
-                HStack {
-                    Text(name)
-                        .font(.system(size: 30, weight: .light, design: .rounded))
-                    Spacer()
-                }
-                .padding(.horizontal)
-            }//TODO: set the height to the mininmum required
-        }
-    }
 }
