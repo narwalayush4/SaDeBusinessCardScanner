@@ -73,7 +73,7 @@ struct MainView: View {
                     .allowsHitTesting(!isDrawerOpen)
                     if isDrawerOpen{
                         HStack(spacing: 0){
-                            DrawerView()
+                            DrawerView(isDrawerOpen: $isDrawerOpen)
                             Rectangle()
                                 .ignoresSafeArea()
                                 .foregroundStyle(Color.black)
