@@ -7,8 +7,11 @@
 
 import SwiftUI
 import CoreData
+import Inject
 
 struct MainView: View {
+    
+    @ObserveInjection var inject
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Card.entity(),
@@ -86,7 +89,7 @@ struct MainView: View {
                 }
             }
         }
-        
+        .enableInjection()
     }
 }
 
