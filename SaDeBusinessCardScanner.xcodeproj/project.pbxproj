@@ -14,6 +14,7 @@
 		A71A2A042C9DF77000D73FF8 /* QRDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A2A032C9DF76A00D73FF8 /* QRDetailView.swift */; };
 		A71A2A062C9E092600D73FF8 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */; };
 		A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71B699C2AC4671B0010A31A /* NavBarView.swift */; };
+		A73588452CD50A1C00CC9D91 /* ShareCardWithQrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73588442CD50A1C00CC9D91 /* ShareCardWithQrView.swift */; };
 		A7380AA92AFE26AB00FEBD08 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */; };
 		A7380AAA2AFE26AB00FEBD08 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */; };
 		A7481C592B38465C00851887 /* AddManuallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7481C582B38465C00851887 /* AddManuallyView.swift */; };
@@ -52,6 +53,7 @@
 		A71A2A032C9DF76A00D73FF8 /* QRDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetailView.swift; sourceTree = "<group>"; };
 		A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		A71B699C2AC4671B0010A31A /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
+		A73588442CD50A1C00CC9D91 /* ShareCardWithQrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardWithQrView.swift; sourceTree = "<group>"; };
 		A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataClass.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataProperties.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A7481C582B38465C00851887 /* AddManuallyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddManuallyView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				A767AF692B34DDF2001E5B8E /* CardScannerView.swift */,
 				A70512A62B164FD400307B2A /* EditView.swift */,
 				A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */,
+				A73588442CD50A1C00CC9D91 /* ShareCardWithQrView.swift */,
 				A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */,
 			);
 			path = Views;
@@ -295,6 +298,7 @@
 				A79B802D2ABF5F3F0056C6FC /* Persistence.swift in Sources */,
 				A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */,
 				A7FD90EC2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld in Sources */,
+				A73588452CD50A1C00CC9D91 /* ShareCardWithQrView.swift in Sources */,
 				A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */,
 				A7950DC22CD2CA9B003E7D0D /* DrawerView.swift in Sources */,
 				A7913C0E2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift in Sources */,

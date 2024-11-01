@@ -263,7 +263,7 @@ struct CardDetailsView: View {
         })
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing){
-                NavigationLink(destination: EditView(card: card)) {
+                NavigationLink(destination: ShareCardWithQrView(card: card)) {
                     Image(systemName: "qrcode")
                 }
             }

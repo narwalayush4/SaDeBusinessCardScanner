@@ -24,6 +24,8 @@ struct TextFieldWithOutDropdownView: View{
                 .overlay {
                     TextField(title, text: $text)
                         .padding()
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                 }
         }
         .padding()

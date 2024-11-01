@@ -26,6 +26,8 @@ struct TextFieldWithDropdownView: View{
                     HStack{
                         TextField(title, text: $text)
                             .padding()
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
                         Spacer()
                         Menu {
                             ForEach(dropdownItems, id: \.self) { item in
