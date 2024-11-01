@@ -12,5 +12,7 @@ struct GroupDetailView: View {
     
     var body: some View {
         Text(group.name)
+            .navigationTitle(group.name)
+            .toolbarTitleDisplayMode(.large)
     }
 }
