@@ -7,8 +7,8 @@
 
 import Foundation
 
-//struct Group {
-//    var address: String
-//    var phone : Int
-//    var city :String
-//}
+struct Group: Identifiable {
+    var id = UUID()
+    var name: String
+    var cards: [CardModel] = []
+}

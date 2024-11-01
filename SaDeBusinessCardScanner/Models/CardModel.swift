@@ -7,18 +7,8 @@
 
 import Foundation
 
-struct CardModel {
-//    var name : String?
-//    var company : String?
-//    var jobTitle: String?
-//    var email : String?
-//    var phone : String?
-//    var address : String? // long strings address how?
-//    var imageName : String? // stores the name of the image stored, to be fetched later
-//    var group: Group?
-//    var website: String?
-//    var text: [String]?
-    
+struct CardModel: Identifiable {
+    var id = UUID()
     var name_: String = ""
     var jobTitle_: String = ""
     var company_: String = ""
@@ -28,8 +18,7 @@ struct CardModel {
     var address3_: String = ""
     var email_: String = ""
     var website_: String = ""
-//    var filePath_: String = ""
+    var group: Group?
     var timeStamp_: Date = Date()
     var options: [String] = ["text 1", "text 2", "text 3",]
-
 }
