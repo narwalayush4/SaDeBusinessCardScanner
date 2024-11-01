@@ -15,6 +15,7 @@
 		A71A2A062C9E092600D73FF8 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */; };
 		A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71B699C2AC4671B0010A31A /* NavBarView.swift */; };
 		A73588452CD50A1C00CC9D91 /* ShareCardWithQrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73588442CD50A1C00CC9D91 /* ShareCardWithQrView.swift */; };
+		A73588482CD519FD00CC9D91 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = A73588472CD519FD00CC9D91 /* Inject */; };
 		A7380AA92AFE26AB00FEBD08 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */; };
 		A7380AAA2AFE26AB00FEBD08 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */; };
 		A7481C592B38465C00851887 /* AddManuallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7481C582B38465C00851887 /* AddManuallyView.swift */; };
@@ -91,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7BE74FE2C9759270092E94E /* CodeScanner in Frameworks */,
+				A73588482CD519FD00CC9D91 /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +232,7 @@
 			name = SaDeBusinessCardScanner;
 			packageProductDependencies = (
 				A7BE74FD2C9759270092E94E /* CodeScanner */,
+				A73588472CD519FD00CC9D91 /* Inject */,
 			);
 			productName = SaDeBusinessCardScanner;
 			productReference = A79B80202ABF5F3C0056C6FC /* SaDeBusinessCardScanner.app */;
@@ -261,6 +264,7 @@
 			mainGroup = A79B80172ABF5F3C0056C6FC;
 			packageReferences = (
 				A7BE74FC2C9759270092E94E /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				A73588462CD519FD00CC9D91 /* XCRemoteSwiftPackageReference "Inject" */,
 			);
 			productRefGroup = A79B80212ABF5F3C0056C6FC /* Products */;
 			projectDirPath = "";
@@ -474,6 +478,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SaDeTech.SaDeBusinessCardScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -544,6 +552,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A73588462CD519FD00CC9D91 /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.2;
+			};
+		};
 		A7BE74FC2C9759270092E94E /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -555,6 +571,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A73588472CD519FD00CC9D91 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A73588462CD519FD00CC9D91 /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
 		A7BE74FD2C9759270092E94E /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A7BE74FC2C9759270092E94E /* XCRemoteSwiftPackageReference "CodeScanner" */;
