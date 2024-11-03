@@ -16,8 +16,6 @@
 		A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71B699C2AC4671B0010A31A /* NavBarView.swift */; };
 		A73588452CD50A1C00CC9D91 /* ShareCardWithQrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73588442CD50A1C00CC9D91 /* ShareCardWithQrView.swift */; };
 		A73588482CD519FD00CC9D91 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = A73588472CD519FD00CC9D91 /* Inject */; };
-		A7380AA92AFE26AB00FEBD08 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */; };
-		A7380AAA2AFE26AB00FEBD08 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */; };
 		A7481C592B38465C00851887 /* AddManuallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7481C582B38465C00851887 /* AddManuallyView.swift */; };
 		A761C6282CD55D3A003D60F9 /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761C6272CD55D39003D60F9 /* GroupDetailView.swift */; };
 		A761C62A2CD55D4B003D60F9 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761C6292CD55D4B003D60F9 /* CellView.swift */; };
@@ -42,6 +40,7 @@
 		A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80682ABF61380056C6FC /* SettingsViewVM.swift */; };
 		A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B806C2ABF6DD60056C6FC /* TabBarView.swift */; };
 		A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */; };
+		A7B13CE72CD56668008C2A67 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B13CE62CD56668008C2A67 /* Card.swift */; };
 		A7BE74FE2C9759270092E94E /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A7BE74FD2C9759270092E94E /* CodeScanner */; };
 		A7F9E4BF2B17621300B1C8B3 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */; };
 		A7FD90EC2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7FD90EA2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld */; };
@@ -57,8 +56,6 @@
 		A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		A71B699C2AC4671B0010A31A /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		A73588442CD50A1C00CC9D91 /* ShareCardWithQrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardWithQrView.swift; sourceTree = "<group>"; };
-		A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataClass.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataProperties.swift"; path = "SaDeBusinessCardScanner/Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A7481C582B38465C00851887 /* AddManuallyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddManuallyView.swift; sourceTree = "<group>"; };
 		A761C6272CD55D39003D60F9 /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		A761C6292CD55D4B003D60F9 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
@@ -85,6 +82,7 @@
 		A79B80682ABF61380056C6FC /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
 		A79B806C2ABF6DD60056C6FC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextRecognizable.swift; sourceTree = "<group>"; };
+		A7B13CE62CD56668008C2A67 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		A7FD90EB2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaDeBusinessCardScanner.xcdatamodel; sourceTree = "<group>"; };
 		A7FD90F12AF7BB8E0069024D /* Card+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+helper.swift"; sourceTree = "<group>"; };
@@ -130,8 +128,7 @@
 		A79B80172ABF5F3C0056C6FC = {
 			isa = PBXGroup;
 			children = (
-				A7380AA72AFE26AB00FEBD08 /* Card+CoreDataClass.swift */,
-				A7380AA82AFE26AB00FEBD08 /* Card+CoreDataProperties.swift */,
+				A7B13CE62CD56668008C2A67 /* Card.swift */,
 				A79B80222ABF5F3C0056C6FC /* SaDeBusinessCardScanner */,
 				A79B80212ABF5F3C0056C6FC /* Products */,
 			);
@@ -299,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79B80612ABF60EB0056C6FC /* AddManuallyViewVM.swift in Sources */,
-				A7380AA92AFE26AB00FEBD08 /* Card+CoreDataClass.swift in Sources */,
 				A7638F292AC3DA980037E292 /* Group.swift in Sources */,
 				A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */,
 				A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */,
@@ -317,6 +313,7 @@
 				A7F9E4BF2B17621300B1C8B3 /* CardDetailsView.swift in Sources */,
 				A7638F252AC3D90A0037E292 /* GroupsView.swift in Sources */,
 				A79B80262ABF5F3C0056C6FC /* MainView.swift in Sources */,
+				A7B13CE72CD56668008C2A67 /* Card.swift in Sources */,
 				A79B80632ABF60FD0056C6FC /* SettingsView.swift in Sources */,
 				A761C6282CD55D3A003D60F9 /* GroupDetailView.swift in Sources */,
 				A79B805D2ABF60B70056C6FC /* CardScannerViewVM.swift in Sources */,
@@ -332,7 +329,6 @@
 				A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */,
 				A70512A72B164FD400307B2A /* EditView.swift in Sources */,
 				A7FD90F22AF7BB8E0069024D /* Card+helper.swift in Sources */,
-				A7380AAA2AFE26AB00FEBD08 /* Card+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
