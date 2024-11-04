@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct EditView: View {
-    
-    @Environment(\.managedObjectContext) var moc
+
+    @Environment(\.modelContext) var modelContext
     @Environment(\.presentationMode) var presentationMode
     @State private var isAlertPresented = false
     @State var card: Card
@@ -47,7 +47,6 @@ struct EditView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        debugPrint("during edit view presentatioMode is: \(presentationMode)")
                         isAlertPresented = true
                     } label: {
                         Text("Delete")
@@ -58,21 +57,13 @@ struct EditView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                         presentationMode.wrappedValue.dismiss()
-                        PersistenceController.shared.save()
                     }
                 }
             })
             .alert("Delete Card", isPresented: $isAlertPresented, actions: {
                 Button("Delete", role: .destructive) {
-                    debugPrint("before dismiss")
+                    modelContext.delete(card)
                     self.presentationMode.wrappedValue.dismiss()
-                    debugPrint("after dismiss")
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {  
-                        // Delay for view dismissal
-                        PersistenceController.shared.delete(card: card)
-                        debugPrint("after saving")
-                    }
                 }
                 Button("Cancel", role: .cancel) {
                     isAlertPresented.toggle()

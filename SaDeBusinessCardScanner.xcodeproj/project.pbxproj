@@ -128,7 +128,6 @@
 		A79B80172ABF5F3C0056C6FC = {
 			isa = PBXGroup;
 			children = (
-				A7B13CE62CD56668008C2A67 /* Card.swift */,
 				A79B80222ABF5F3C0056C6FC /* SaDeBusinessCardScanner */,
 				A79B80212ABF5F3C0056C6FC /* Products */,
 			);
@@ -197,6 +196,7 @@
 		A79B80562ABF601B0056C6FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A7B13CE62CD56668008C2A67 /* Card.swift */,
 				A79B80662ABF61190056C6FC /* CardModel.swift */,
 				A7638F282AC3DA980037E292 /* Group.swift */,
 				A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */,
