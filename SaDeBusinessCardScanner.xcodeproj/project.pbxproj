@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A704DA7C2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704DA7B2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift */; };
 		A70512A72B164FD400307B2A /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70512A62B164FD400307B2A /* EditView.swift */; };
-		A710E0F42AC7510200808354 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710E0F32AC7510200808354 /* SideBarView.swift */; };
 		A7128ECC2B4640D10076CD8F /* LoadingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */; };
 		A71A2A042C9DF77000D73FF8 /* QRDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A2A032C9DF76A00D73FF8 /* QRDetailView.swift */; };
 		A71A2A062C9E092600D73FF8 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */; };
@@ -45,7 +44,6 @@
 /* Begin PBXFileReference section */
 		A704DA7B2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithOutDropdownView.swift; sourceTree = "<group>"; };
 		A70512A62B164FD400307B2A /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
-		A710E0F32AC7510200808354 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVIew.swift; sourceTree = "<group>"; };
 		A71A2A032C9DF76A00D73FF8 /* QRDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetailView.swift; sourceTree = "<group>"; };
 		A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				A7481C582B38465C00851887 /* AddManuallyView.swift */,
 				A79B80622ABF60FD0056C6FC /* SettingsView.swift */,
 				A7638F242AC3D90A0037E292 /* GroupsView.swift */,
-				A710E0F32AC7510200808354 /* SideBarView.swift */,
 				A767AF692B34DDF2001E5B8E /* CardScannerView.swift */,
 				A70512A62B164FD400307B2A /* EditView.swift */,
 				A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */,
@@ -277,7 +274,6 @@
 				A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */,
 				A7128ECC2B4640D10076CD8F /* LoadingVIew.swift in Sources */,
 				A761C62A2CD55D4B003D60F9 /* CellView.swift in Sources */,
-				A710E0F42AC7510200808354 /* SideBarView.swift in Sources */,
 				A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */,
 				A79CA4F92CD885AD001149D4 /* Assets.swift in Sources */,
 				A73588452CD50A1C00CC9D91 /* ShareCardWithQrView.swift in Sources */,
