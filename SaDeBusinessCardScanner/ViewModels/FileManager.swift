@@ -54,7 +54,7 @@ struct FileSystem {
         if let image = retrieveImage(from: card.timeStamp) {
             return image
         } else {
-            return UIImage(named: "logo_512x512")!
+            return UIImage(named: Assets.Images.logo512x512)!
         }
     }
     

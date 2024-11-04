@@ -73,11 +73,11 @@ struct EditView: View {
             }, message: {
                 Text("Are you sure you want to delete this card?")
             })
-            .background(Color("primaryC"))
+            .background(Color.primaryC)
             .navigationTitle("Card Details")
             .navigationBarTitleDisplayMode(.large)
             .toolbarBackground(.visible, for: .automatic)
-            .background(Color("secondaryC"))
+            .background(Color.secondaryC)
         }
     }
 }

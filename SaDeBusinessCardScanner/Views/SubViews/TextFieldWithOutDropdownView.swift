@@ -19,7 +19,7 @@ struct TextFieldWithOutDropdownView: View{
                 Spacer()
             }
             RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(Color("primaryC"))
+                .foregroundStyle(Color.primaryC)
                 .frame(height: 50)
                 .overlay {
                     TextField(title, text: $text)

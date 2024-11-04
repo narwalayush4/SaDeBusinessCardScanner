@@ -25,7 +25,7 @@ struct TabBarView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 20)
                     .frame(width: screenWidth, height: 80)
-                    .foregroundStyle(Color("secondaryC"))
+                    .foregroundStyle(Color.secondaryC)
                 HStack{
                     Button(action: {
                         isQRCodeScannerPresented = true
@@ -38,7 +38,7 @@ struct TabBarView: View {
                                 .font(.callout)
                         }
                         .frame(width: screenWidth/3)
-                        .foregroundStyle(Color("primaryC"))
+                        .foregroundStyle(Color.primaryC)
                     })
                     NavigationLink(destination: AddManuallyView(isScannerPresented: true)) {
                         VStack(alignment: .center) {
@@ -50,11 +50,11 @@ struct TabBarView: View {
                                 .font(.callout)
                         }
                         .frame(width: screenWidth/3)
-                        .foregroundStyle(Color("primaryC"))
+                        .foregroundStyle(Color.primaryC)
                     }
                     NavigationLink(destination: AddManuallyView()) {
                         VStack(alignment: .center) {
-                            Image("card")
+                            Image(Assets.Images.cardIcon)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 25, height: 25)
@@ -63,7 +63,7 @@ struct TabBarView: View {
                         }
                         .padding()
                         .frame(width: screenWidth/3)
-                        .foregroundStyle(Color("primaryC"))
+                        .foregroundStyle(Color.primaryC)
                     }
                 }
                 .sheet(isPresented: self.$isQRCodeScannerPresented, content: {
@@ -112,13 +112,13 @@ struct TabBarView: View {
                         .frame(width: screenWidth/3 - 1, height: 80)
                     Rectangle()
                         .frame(width: 1, height: 55)
-                        .foregroundStyle(Color("primaryC"))
+                        .foregroundStyle(Color.primaryC)
                     Rectangle()
                         .foregroundStyle(Color.clear)
                         .frame(width: screenWidth/3 - 1, height: 80)
                     Rectangle()
                         .frame(width: 1, height: 55)
-                        .foregroundStyle(Color("primaryC"))
+                        .foregroundStyle(Color.primaryC)
                     Rectangle()
                         .foregroundStyle(Color.clear)
                         .frame(width: screenWidth/3 - 1, height: 80)

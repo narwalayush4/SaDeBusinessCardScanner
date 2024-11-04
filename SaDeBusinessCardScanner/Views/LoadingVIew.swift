@@ -11,7 +11,7 @@ struct LoadingVIew: View {
     var body: some View {
         VStack {
             // Add your loading indicator or logo here
-            Image("logo_512x512")
+            Image(Assets.Images.logo512x512)
                 .resizable()
                 .frame(width: 200, height: 200)
             ProgressView()

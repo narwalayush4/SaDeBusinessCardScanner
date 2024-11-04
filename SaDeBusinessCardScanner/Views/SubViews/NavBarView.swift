@@ -23,7 +23,7 @@ struct NavBarView: View {
         }
         .padding()
         .foregroundStyle(Color.white)
-        .background(Color("secondaryC").ignoresSafeArea(edges: .top))
+        .background(Color.secondaryC.ignoresSafeArea(edges: .top))
     }
 }
 

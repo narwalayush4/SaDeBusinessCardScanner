@@ -15,7 +15,7 @@ struct DrawerView: View{
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20){
-            Image("logo_512x512")
+            Image(Assets.Images.logo512x512)
                 .resizable()
                 .scaledToFit()
                 .frame(width: width)

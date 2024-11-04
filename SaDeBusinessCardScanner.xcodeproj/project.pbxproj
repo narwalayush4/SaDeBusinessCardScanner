@@ -37,6 +37,7 @@
 		A79B80652ABF610F0056C6FC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80642ABF610F0056C6FC /* CardView.swift */; };
 		A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80682ABF61380056C6FC /* SettingsViewVM.swift */; };
 		A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B806C2ABF6DD60056C6FC /* TabBarView.swift */; };
+		A79CA4F92CD885AD001149D4 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79CA4F82CD885AD001149D4 /* Assets.swift */; };
 		A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */; };
 		A7B13CE72CD56668008C2A67 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B13CE62CD56668008C2A67 /* Card.swift */; };
 		A7BE74FE2C9759270092E94E /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A7BE74FD2C9759270092E94E /* CodeScanner */; };
@@ -75,6 +76,7 @@
 		A79B80642ABF610F0056C6FC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A79B80682ABF61380056C6FC /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
 		A79B806C2ABF6DD60056C6FC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		A79CA4F82CD885AD001149D4 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextRecognizable.swift; sourceTree = "<group>"; };
 		A7B13CE62CD56668008C2A67 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				A79B80272ABF5F3F0056C6FC /* Assets.xcassets */,
+				A79CA4F82CD885AD001149D4 /* Assets.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				A761C62A2CD55D4B003D60F9 /* CellView.swift in Sources */,
 				A710E0F42AC7510200808354 /* SideBarView.swift in Sources */,
 				A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */,
+				A79CA4F92CD885AD001149D4 /* Assets.swift in Sources */,
 				A73588452CD50A1C00CC9D91 /* ShareCardWithQrView.swift in Sources */,
 				A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */,
 				A7950DC22CD2CA9B003E7D0D /* DrawerView.swift in Sources */,

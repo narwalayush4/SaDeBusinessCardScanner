@@ -46,11 +46,11 @@ struct MainView: View {
                         Spacer()
                         VStack{
                             if cards.isEmpty{
-                                Image("image1")
+                                Image(Assets.Images.homeScreenImage)
                                     .resizable()
                                     .frame(width: 200, height: 200)
                                 Text("Create your first Card Scan")
-                                    .foregroundStyle(Color("secondaryC"))
+                                    .foregroundStyle(Color.secondaryC)
                                     .fontWeight(.medium)
                             } else {
                                 ScrollView {

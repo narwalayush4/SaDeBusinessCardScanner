@@ -51,7 +51,7 @@ struct GroupsView: View {
                 
                 Spacer()
             }
-            .background(Color("primaryC"))
+            .background(Color.primaryC)
             .navigationTitle("Groups")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

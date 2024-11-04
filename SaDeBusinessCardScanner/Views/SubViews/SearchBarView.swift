@@ -14,7 +14,7 @@ struct SearchBarView: View {
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")
-                .foregroundStyle(Color("secondaryC"))
+                .foregroundStyle(Color.secondaryC)
             TextField("Search Your Card", text: $searchText)
                 .foregroundStyle(Color(uiColor: .black))
                 .autocapitalization(.none)

@@ -21,7 +21,7 @@ struct ShareCardWithQrView: View {
                         .padding(10)
                     VStack {
                         VStack {
-                            Image(uiImage: UIImage(named: "person")!)
+                            Image(uiImage: UIImage(named: Assets.Images.person)!)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 100, height: 100)
@@ -35,7 +35,7 @@ struct ShareCardWithQrView: View {
                                 Text("Phone: \(card.phone)")
                                 Text("Email: \(card.email)")
                                 Text("Website: \(card.website)")
-                                Text("Address: \(card.address)")
+                                Text("Address: \(card.fullAddress)")
                             }
                             .padding()
                         }
@@ -63,7 +63,7 @@ extension ShareCardWithQrView {
                "TEL:\(card.phone)\n" +
                "EMAIL:\(card.email)\n" +
                "URL:\(card.website)\n" +
-               "ADR:\(card.address)\n" +
+               "ADR:\(card.fullAddress)\n" +
                "END:VCARD"
     }
     

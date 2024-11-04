@@ -58,7 +58,7 @@ struct AddManuallyView: View {
                             .padding()
                         }
                 } else {
-                    Image("logo512x512")
+                    Image(Assets.Images.logo512x512)
                         .frame(width: 400, height: 250)
                         .background(.thickMaterial)
                         .overlay {
@@ -127,11 +127,11 @@ struct AddManuallyView: View {
                     }
                 }
             })
-            .background(Color("primaryC"))
+            .background(Color.primaryC)
             .navigationTitle("Card Details")
             .navigationBarTitleDisplayMode(.large)
             .toolbarBackground(.visible, for: .automatic)
-            .background(Color("secondaryC"))
+            .background(Color.secondaryC)
         }
     }
 }
