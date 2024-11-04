@@ -28,7 +28,9 @@ struct MainView: View {
             let searchString = searchText.lowercased()
             return card.name.lowercased().contains(searchString) ||
                    card.company.lowercased().contains(searchString) ||
-                   card.address.lowercased().contains(searchString)
+                   card.address1.lowercased().contains(searchString) ||
+                   card.address2.lowercased().contains(searchString) ||
+                   card.address3.lowercased().contains(searchString)
         }
     }
     

@@ -164,13 +164,13 @@ struct CardDetailsView: View {
                         .padding(.horizontal)
                     VStack(alignment: .leading){
                         Button {
-                            if let mapURL = URL(string: "http://maps.apple.com/?address=\(card.address)") {
+                            if let mapURL = URL(string: "http://maps.apple.com/?address=\(card.fullAddress)") {
                                         UIApplication.shared.open(mapURL)
                                     }
                         } label: {
                             HStack{
                                 VStack(alignment: .leading){
-                                    Text(card.address)
+                                    Text(card.fullAddress)
                                         .foregroundStyle(.black)
                                 }
                                 Spacer()
@@ -305,11 +305,23 @@ extension CardDetailsView {
             let urlAddress = CNLabeledValue(label: CNLabelURLAddressHomePage, value: card.website as NSString)
             newContact.urlAddresses = [urlAddress]
         }
-        if !card.address.isEmpty {
+        if !card.fullAddress.isEmpty {
             let homeAddress = CNMutablePostalAddress()
-            homeAddress.street = card.address // Assuming this is a single line address
-            newContact.postalAddresses = [CNLabeledValue(label: CNLabelHome, value: homeAddress as CNPostalAddress)]
+            let addressComponents = card.fullAddress.components(separatedBy: ",")
+            if addressComponents.count >= 3 {
+                homeAddress.street = addressComponents[0].trimmingCharacters(in: .whitespaces)
+                homeAddress.city = addressComponents[1].trimmingCharacters(in: .whitespaces)
+                let stateZip = addressComponents[2].trimmingCharacters(in: .whitespaces).components(separatedBy: " ")
+                if stateZip.count >= 2 {
+                    homeAddress.state = stateZip[0]
+                    homeAddress.postalCode = stateZip[1]
+                }
+            } else {
+                homeAddress.street = card.fullAddress
+            }
+            newContact.postalAddresses = [CNLabeledValue(label: CNLabelHome, value: homeAddress)]
         }
+
         
         let store = CNContactStore()
         let request = CNSaveRequest()

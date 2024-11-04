@@ -34,7 +34,9 @@ struct EditView: View {
                     TextFieldWithOutDropdownView(title: "Company", text: $card.company)
                     TextFieldWithOutDropdownView(title: "Phone No", text: $card.phone)
                     TextFieldWithOutDropdownView(title: "Email", text: $card.email)
-                    TextFieldWithOutDropdownView(title: "Address", text: $card.address)
+                    TextFieldWithOutDropdownView(title: "Address Line 1", text: $card.address1)
+                    TextFieldWithOutDropdownView(title: "Address Line 2", text: $card.address2)
+                    TextFieldWithOutDropdownView(title: "Address Line 3", text: $card.address3)
                     TextFieldWithOutDropdownView(title: "Website", text: $card.website)
                 }
                 .padding(20.0)

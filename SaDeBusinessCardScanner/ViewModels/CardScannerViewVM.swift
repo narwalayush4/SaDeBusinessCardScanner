@@ -38,7 +38,7 @@ class TextRecognizer {
             try handler.perform([textRecognitionRequest])
             print(recognizedText)
             let card = parseResults(for: recognizedText, from: cgImage)
-            FileSystem().saveImage(image: cgImage, date: card!.timeStamp_)
+            FileSystem().saveImage(image: cgImage, date: card!.timeStamp)
             return card
         } catch {
             print(error)
@@ -48,7 +48,7 @@ class TextRecognizer {
     
     internal func parseResults(for recognizedText: [String], from image: CGImage) -> Card? {
         var linesToKeep = [String]()
-        var card = Card()
+        let card = Card()
         for line in recognizedText {
             if let email = extractEmail(from: line) {
                 card.email = email

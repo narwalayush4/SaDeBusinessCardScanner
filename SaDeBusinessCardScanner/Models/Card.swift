@@ -9,7 +9,10 @@ import Foundation
 import SwiftData
 
 @Model final class Card {
-    var address: String
+    private(set) var fullAddress: String = ""
+    var address1: String { didSet { updateFullAddress() } }
+    var address2: String { didSet { updateFullAddress() } }
+    var address3: String { didSet { updateFullAddress() } }
     var company: String
     var email: String
     var filePath: String
@@ -21,7 +24,9 @@ import SwiftData
     var options: [String] = []
     
     init(
-        address: String = "",
+        address1: String = "",
+        address2: String = "",
+        address3: String = "",
         company: String = "",
         email: String = "",
         filePath: String = "",
@@ -31,7 +36,9 @@ import SwiftData
         timeStamp: Date = Date(),
         website: String = ""
     ) {
-        self.address = address
+        self.address1 = address1
+        self.address2 = address2
+        self.address3 = address3
         self.company = company
         self.email = email
         self.filePath = filePath
@@ -42,6 +49,11 @@ import SwiftData
         self.website = website
     }
     
+    // Private method to update the full address
+    private func updateFullAddress() {
+        fullAddress = "\(address1); \(address2); \(address3)"
+    }
+    
     static var shared: Card {
         let card = Card()
         card.name = "John Doe"
@@ -50,7 +62,7 @@ import SwiftData
         card.email = "john.doe@example.com"
         card.phone = "1234567890"
         card.website = "www.example.com"
-        card.address = "123 Main Street"
+        card.address1 = "123 Main Street"
         card.timeStamp = Date(timeIntervalSince1970: 60000)
         return card
     }

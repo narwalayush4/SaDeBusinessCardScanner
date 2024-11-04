@@ -162,9 +162,9 @@ struct TabBarView: View {
             } else if line.hasPrefix("ADR:") {
                 let addressComponents = line.replacingOccurrences(of: "ADR:", with: "").split(separator: ";")
                 if addressComponents.count >= 3 {
-                    scannedCard.address1_ = String(addressComponents[0])
-                    scannedCard.address2_ = String(addressComponents[1])
-                    scannedCard.address3_ = String(addressComponents[2])
+                    scannedCard.address1 = String(addressComponents[0])
+                    scannedCard.address2 = String(addressComponents[1])
+                    scannedCard.address3 = String(addressComponents[2])
                 }
             } else if line.hasPrefix("URL:") {
                 let website = line.replacingOccurrences(of: "URL:", with: "")
@@ -193,9 +193,9 @@ struct TabBarView: View {
             } else if field.hasPrefix("ADR:") {
                 let addressComponents = field.replacingOccurrences(of: "ADR:", with: "").split(separator: ",")
                 if addressComponents.count >= 3 {
-                    scannedCard.address1_ = String(addressComponents[0])
-                    scannedCard.address2_ = String(addressComponents[1])
-                    scannedCard.address3_ = String(addressComponents[2])
+                    scannedCard.address1 = String(addressComponents[0])
+                    scannedCard.address2 = String(addressComponents[1])
+                    scannedCard.address3 = String(addressComponents[2])
                 }
             } else if field.hasPrefix("URL:") {
                 let website = field.replacingOccurrences(of: "URL:", with: "")
