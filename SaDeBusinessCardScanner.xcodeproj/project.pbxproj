@@ -30,9 +30,7 @@
 		A79B80262ABF5F3C0056C6FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80252ABF5F3C0056C6FC /* MainView.swift */; };
 		A79B80282ABF5F3F0056C6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79B80272ABF5F3F0056C6FC /* Assets.xcassets */; };
 		A79B802B2ABF5F3F0056C6FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79B802A2ABF5F3F0056C6FC /* Preview Assets.xcassets */; };
-		A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805A2ABF609B0056C6FC /* MainViewVM.swift */; };
 		A79B805D2ABF60B70056C6FC /* CardScannerViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805C2ABF60B70056C6FC /* CardScannerViewVM.swift */; };
-		A79B80612ABF60EB0056C6FC /* AddManuallyViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */; };
 		A79B80632ABF60FD0056C6FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80622ABF60FD0056C6FC /* SettingsView.swift */; };
 		A79B80652ABF610F0056C6FC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80642ABF610F0056C6FC /* CardView.swift */; };
 		A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80682ABF61380056C6FC /* SettingsViewVM.swift */; };
@@ -69,9 +67,7 @@
 		A79B80272ABF5F3F0056C6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A79B802A2ABF5F3F0056C6FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A79B80322ABF5F3F0056C6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A79B805A2ABF609B0056C6FC /* MainViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewVM.swift; sourceTree = "<group>"; };
 		A79B805C2ABF60B70056C6FC /* CardScannerViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScannerViewVM.swift; sourceTree = "<group>"; };
-		A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManuallyViewVM.swift; sourceTree = "<group>"; };
 		A79B80622ABF60FD0056C6FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A79B80642ABF610F0056C6FC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A79B80682ABF61380056C6FC /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
@@ -191,9 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */,
-				A79B805A2ABF609B0056C6FC /* MainViewVM.swift */,
 				A79B805C2ABF60B70056C6FC /* CardScannerViewVM.swift */,
-				A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */,
 				A79B80682ABF61380056C6FC /* SettingsViewVM.swift */,
 				A7654BB72AFA629E00279B2B /* FileManager.swift */,
 			);
@@ -278,7 +272,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79B80612ABF60EB0056C6FC /* AddManuallyViewVM.swift in Sources */,
 				A7638F292AC3DA980037E292 /* Group.swift in Sources */,
 				A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */,
 				A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */,
@@ -288,7 +281,6 @@
 				A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */,
 				A79CA4F92CD885AD001149D4 /* Assets.swift in Sources */,
 				A73588452CD50A1C00CC9D91 /* ShareCardWithQrView.swift in Sources */,
-				A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */,
 				A7950DC22CD2CA9B003E7D0D /* DrawerView.swift in Sources */,
 				A7913C0E2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift in Sources */,
 				A71A2A042C9DF77000D73FF8 /* QRDetailView.swift in Sources */,
