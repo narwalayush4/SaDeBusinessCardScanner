@@ -30,7 +30,6 @@
 		A79B80262ABF5F3C0056C6FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80252ABF5F3C0056C6FC /* MainView.swift */; };
 		A79B80282ABF5F3F0056C6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79B80272ABF5F3F0056C6FC /* Assets.xcassets */; };
 		A79B802B2ABF5F3F0056C6FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79B802A2ABF5F3F0056C6FC /* Preview Assets.xcassets */; };
-		A79B802D2ABF5F3F0056C6FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B802C2ABF5F3F0056C6FC /* Persistence.swift */; };
 		A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805A2ABF609B0056C6FC /* MainViewVM.swift */; };
 		A79B805D2ABF60B70056C6FC /* CardScannerViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B805C2ABF60B70056C6FC /* CardScannerViewVM.swift */; };
 		A79B80612ABF60EB0056C6FC /* AddManuallyViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */; };
@@ -43,7 +42,6 @@
 		A7B13CE72CD56668008C2A67 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B13CE62CD56668008C2A67 /* Card.swift */; };
 		A7BE74FE2C9759270092E94E /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A7BE74FD2C9759270092E94E /* CodeScanner */; };
 		A7F9E4BF2B17621300B1C8B3 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */; };
-		A7FD90EC2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7FD90EA2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld */; };
 		A7FD90F22AF7BB8E0069024D /* Card+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD90F12AF7BB8E0069024D /* Card+helper.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +69,6 @@
 		A79B80252ABF5F3C0056C6FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A79B80272ABF5F3F0056C6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A79B802A2ABF5F3F0056C6FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A79B802C2ABF5F3F0056C6FC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A79B80322ABF5F3F0056C6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A79B805A2ABF609B0056C6FC /* MainViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewVM.swift; sourceTree = "<group>"; };
 		A79B805C2ABF60B70056C6FC /* CardScannerViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScannerViewVM.swift; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 		A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextRecognizable.swift; sourceTree = "<group>"; };
 		A7B13CE62CD56668008C2A67 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
-		A7FD90EB2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaDeBusinessCardScanner.xcdatamodel; sourceTree = "<group>"; };
 		A7FD90F12AF7BB8E0069024D /* Card+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,12 +140,12 @@
 		A79B80222ABF5F3C0056C6FC /* SaDeBusinessCardScanner */ = {
 			isa = PBXGroup;
 			children = (
+				A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */,
 				A79B80562ABF601B0056C6FC /* Models */,
 				A79B80542ABF5FF40056C6FC /* Views */,
 				A79B80572ABF60420056C6FC /* ViewModels */,
 				A79B80292ABF5F3F0056C6FC /* Preview Content */,
 				A79B80552ABF600A0056C6FC /* Other */,
-				A79B80232ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift */,
 				A79B80322ABF5F3F0056C6FC /* Info.plist */,
 			);
 			path = SaDeBusinessCardScanner;
@@ -186,8 +182,6 @@
 		A79B80552ABF600A0056C6FC /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				A7FD90EA2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld */,
-				A79B802C2ABF5F3F0056C6FC /* Persistence.swift */,
 				A79B80272ABF5F3F0056C6FC /* Assets.xcassets */,
 			);
 			path = Other;
@@ -302,9 +296,7 @@
 				A7128ECC2B4640D10076CD8F /* LoadingVIew.swift in Sources */,
 				A761C62A2CD55D4B003D60F9 /* CellView.swift in Sources */,
 				A710E0F42AC7510200808354 /* SideBarView.swift in Sources */,
-				A79B802D2ABF5F3F0056C6FC /* Persistence.swift in Sources */,
 				A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */,
-				A7FD90EC2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld in Sources */,
 				A73588452CD50A1C00CC9D91 /* ShareCardWithQrView.swift in Sources */,
 				A79B805B2ABF609B0056C6FC /* MainViewVM.swift in Sources */,
 				A7950DC22CD2CA9B003E7D0D /* DrawerView.swift in Sources */,
@@ -586,19 +578,6 @@
 			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		A7FD90EA2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A7FD90EB2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodel */,
-			);
-			currentVersion = A7FD90EB2AF7BA840069024D /* SaDeBusinessCardScanner.xcdatamodel */;
-			path = SaDeBusinessCardScanner.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A79B80182ABF5F3C0056C6FC /* Project object */;
 }
