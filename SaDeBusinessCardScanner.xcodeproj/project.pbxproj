@@ -35,14 +35,12 @@
 		A79B80612ABF60EB0056C6FC /* AddManuallyViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */; };
 		A79B80632ABF60FD0056C6FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80622ABF60FD0056C6FC /* SettingsView.swift */; };
 		A79B80652ABF610F0056C6FC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80642ABF610F0056C6FC /* CardView.swift */; };
-		A79B80672ABF61190056C6FC /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80662ABF61190056C6FC /* CardModel.swift */; };
 		A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B80682ABF61380056C6FC /* SettingsViewVM.swift */; };
 		A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B806C2ABF6DD60056C6FC /* TabBarView.swift */; };
 		A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */; };
 		A7B13CE72CD56668008C2A67 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B13CE62CD56668008C2A67 /* Card.swift */; };
 		A7BE74FE2C9759270092E94E /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A7BE74FD2C9759270092E94E /* CodeScanner */; };
 		A7F9E4BF2B17621300B1C8B3 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */; };
-		A7FD90F22AF7BB8E0069024D /* Card+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD90F12AF7BB8E0069024D /* Card+helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,13 +73,11 @@
 		A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManuallyViewVM.swift; sourceTree = "<group>"; };
 		A79B80622ABF60FD0056C6FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A79B80642ABF610F0056C6FC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		A79B80662ABF61190056C6FC /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		A79B80682ABF61380056C6FC /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
 		A79B806C2ABF6DD60056C6FC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextRecognizable.swift; sourceTree = "<group>"; };
 		A7B13CE62CD56668008C2A67 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
-		A7FD90F12AF7BB8E0069024D /* Card+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,10 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B13CE62CD56668008C2A67 /* Card.swift */,
-				A79B80662ABF61190056C6FC /* CardModel.swift */,
 				A7638F282AC3DA980037E292 /* Group.swift */,
-				A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */,
-				A7FD90F12AF7BB8E0069024D /* Card+helper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +195,7 @@
 		A79B80572ABF60420056C6FC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A7A1D06E2AD5184E0019143F /* ImageTextRecognizable.swift */,
 				A79B805A2ABF609B0056C6FC /* MainViewVM.swift */,
 				A79B805C2ABF60B70056C6FC /* CardScannerViewVM.swift */,
 				A79B80602ABF60EB0056C6FC /* AddManuallyViewVM.swift */,
@@ -312,7 +306,6 @@
 				A78E3D992CC6639500B9C20F /* SearchBarView.swift in Sources */,
 				A7654BB82AFA629E00279B2B /* FileManager.swift in Sources */,
 				A704DA7C2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift in Sources */,
-				A79B80672ABF61190056C6FC /* CardModel.swift in Sources */,
 				A767AF6A2B34DDF2001E5B8E /* CardScannerView.swift in Sources */,
 				A71A2A062C9E092600D73FF8 /* ShareSheetView.swift in Sources */,
 				A7481C592B38465C00851887 /* AddManuallyView.swift in Sources */,
@@ -320,7 +313,6 @@
 				A79B80652ABF610F0056C6FC /* CardView.swift in Sources */,
 				A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */,
 				A70512A72B164FD400307B2A /* EditView.swift in Sources */,
-				A7FD90F22AF7BB8E0069024D /* Card+helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

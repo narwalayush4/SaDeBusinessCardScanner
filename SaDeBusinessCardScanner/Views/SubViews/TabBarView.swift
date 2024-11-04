@@ -14,7 +14,7 @@ struct TabBarView: View {
     @Environment(\.managedObjectContext) var moc
     let screenWidth = UIScreen.main.bounds.size.width * 0.9
     @State private var isCardDetailModifierPresented = false
-    @State private var scannedCard = CardModel()
+    @State private var scannedCard = Card()
     @State private var isQRCodeScannerPresented: Bool = false
     @State private var isAlertPresented = false
     @State private var showQRDetailView: Bool = false
@@ -146,19 +146,19 @@ struct TabBarView: View {
         for line in lines {
             if line.hasPrefix("FN:") {
                 let name = line.replacingOccurrences(of: "FN:", with: "")
-                scannedCard.name_ = name
+                scannedCard.name = name
             } else if line.hasPrefix("ORG:") {
                 let company = line.replacingOccurrences(of: "ORG:", with: "")
-                scannedCard.company_ = company
+                scannedCard.company = company
             } else if line.hasPrefix("TITLE:") {
                 let jobTitle = line.replacingOccurrences(of: "TITLE:", with: "")
-                scannedCard.jobTitle_ = jobTitle
+                scannedCard.jobTitle = jobTitle
             } else if line.hasPrefix("TEL:") {
                 let phone = line.replacingOccurrences(of: "TEL:", with: "")
-                scannedCard.phone_ = phone
+                scannedCard.phone = phone
             } else if line.hasPrefix("EMAIL:") {
                 let email = line.replacingOccurrences(of: "EMAIL:", with: "")
-                scannedCard.email_ = email
+                scannedCard.email = email
             } else if line.hasPrefix("ADR:") {
                 let addressComponents = line.replacingOccurrences(of: "ADR:", with: "").split(separator: ";")
                 if addressComponents.count >= 3 {
@@ -168,7 +168,7 @@ struct TabBarView: View {
                 }
             } else if line.hasPrefix("URL:") {
                 let website = line.replacingOccurrences(of: "URL:", with: "")
-                scannedCard.website_ = website
+                scannedCard.website = website
             }
         }
     }
@@ -180,16 +180,16 @@ struct TabBarView: View {
         for field in fields {
             if field.hasPrefix("N:") {
                 let name = field.replacingOccurrences(of: "N:", with: "")
-                scannedCard.name_ = name
+                scannedCard.name = name
             } else if field.hasPrefix("ORG:") {
                 let company = field.replacingOccurrences(of: "ORG:", with: "")
-                scannedCard.company_ = company
+                scannedCard.company = company
             } else if field.hasPrefix("TEL:") {
                 let phone = field.replacingOccurrences(of: "TEL:", with: "")
-                scannedCard.phone_ = phone
+                scannedCard.phone = phone
             } else if field.hasPrefix("EMAIL:") {
                 let email = field.replacingOccurrences(of: "EMAIL:", with: "")
-                scannedCard.email_ = email
+                scannedCard.email = email
             } else if field.hasPrefix("ADR:") {
                 let addressComponents = field.replacingOccurrences(of: "ADR:", with: "").split(separator: ",")
                 if addressComponents.count >= 3 {
@@ -199,7 +199,7 @@ struct TabBarView: View {
                 }
             } else if field.hasPrefix("URL:") {
                 let website = field.replacingOccurrences(of: "URL:", with: "")
-                scannedCard.website_ = website
+                scannedCard.website = website
             }
         }
         print("this is mecard\(scannedCard)")

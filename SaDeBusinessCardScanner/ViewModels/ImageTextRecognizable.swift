@@ -45,27 +45,4 @@ public extension ImageTextRecognizable {
             print(error)
         }
     }
-    
-//    internal func parseResults(for recognizedText: [String]) -> CardModel {
-//        //company
-//        let company = recognizedText.first
-//        
-//        // Credit Card Number
-//        let creditCardNumber = recognizedText.first(where: { $0.count >= 14 && ["4", "5", "3", "6"].contains($0.first) })
-//        
-//        // Expiry Date
-//        let expiryDateString = recognizedText.first(where: { $0.count > 4 && $0.contains("/") })
-//        let expiryDate = expiryDateString?.filter({ $0.isNumber || $0 == "/" })
-//        
-//        // Name
-//        let ignoreList = ["GOOD THRU", "GOOD", "THRU", "Gold", "GOLD", "Standard", "STANDARD", "Platinum", "PLATINUM", "WORLD ELITE", "WORLD", "ELITE", "World Elite", "World", "Elite"]
-//        let wordsToAvoid = [creditCardNumber, expiryDateString] + ignoreList +
-//        CardType.allCases.map { $0.rawValue } +
-//        CardType.allCases.map { $0.rawValue.lowercased() } +
-//        CardType.allCases.map { $0.rawValue.uppercased() }
-//        let name = recognizedText.filter({ !wordsToAvoid.contains($0) }).last
-//        
-//        return CardModel(numberWithDelimiters: creditCardNumber, name: name, expiryDate: expiryDate)
-//        return CardModel(company: company, name: <#T##String?#>, jobTitle: <#T##String?#>, email: <#T##String?#>, mobile: <#T##String?#>, address: <#T##String?#>, imageName: <#T##String?#>, group: <#T##Group?#>, website: <#T##String?#>)
-//    }
 }

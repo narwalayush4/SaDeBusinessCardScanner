@@ -10,5 +10,5 @@ import Foundation
 struct Group: Identifiable {
     var id = UUID()
     var name: String
-    var cards: [CardModel] = []
+    var cards: [Card] = []
 }

@@ -13,10 +13,10 @@ import VisionKit
 struct CardScannerView: UIViewControllerRepresentable {
     
     private let completionHandler: () -> Void
-    @Binding var scannedCard: CardModel
+    @Binding var scannedCard: Card
     private let onCancel: () -> Void
     
-    init(completionHandler: @escaping () -> Void, scannedCard: Binding<CardModel>, onCancel: @escaping () -> Void) {
+    init(completionHandler: @escaping () -> Void, scannedCard: Binding<Card>, onCancel: @escaping () -> Void) {
         self.completionHandler = completionHandler
         _scannedCard = scannedCard
         self.onCancel = onCancel
@@ -39,10 +39,10 @@ struct CardScannerView: UIViewControllerRepresentable {
     
     final public class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate, ImageTextRecognizable {
         private let completionHandler: () -> Void
-        @Binding var scannedCard: CardModel
+        @Binding var scannedCard: Card
         private let onCancel: () -> Void
         
-        init(completionHandler: @escaping () -> Void, scannedCard: Binding<CardModel>, onCancel: @escaping () -> Void){
+        init(completionHandler: @escaping () -> Void, scannedCard: Binding<Card>, onCancel: @escaping () -> Void){
             self.completionHandler = completionHandler
             _scannedCard = scannedCard
             self.onCancel = onCancel
@@ -61,28 +61,15 @@ struct CardScannerView: UIViewControllerRepresentable {
             print("Document camera view controller did finish with ", scan)
             let image = scan.imageOfPage(at: 0)
             let recognizer = TextRecognizer()
-            scannedCard = recognizer.validateImage(image: image) ?? CardModel()
-//            recognizer.validateImage(image: image, withCompletionHandler: completionHandler)
+            scannedCard = recognizer.validateImage(image: image) ?? Card()
             controller.delegate = nil
             completionHandler()
         }
         
         public func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController){
             onCancel()
-//            completionHandler(nil)
-        }
-        
-        public func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error){
-            print("Document camera view controller did finish with error ", error)
-//            completionHandler(nil)
         }
         
     }
 }
-
-//#Preview{
-//    func completionHandler(){}
-//    func onCancel(){}
-//    return CardScannerView(completionHandler: completionHandler, scannedCard: .constant(CardModel()), onCancel: onCancel)
-//}
 

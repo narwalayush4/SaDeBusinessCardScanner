@@ -18,7 +18,7 @@ import SwiftData
     var phone: String
     var timeStamp: Date
     var website: String
-    var options: [String] = ["text 1", "text 2", "text 3",]
+    var options: [String] = []
     
     init(
         address: String = "",

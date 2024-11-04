@@ -12,7 +12,7 @@ import UIKit
 
 class TextRecognizer {
     
-    internal func validateImage(image: UIImage?) -> CardModel? {
+    internal func validateImage(image: UIImage?) -> Card? {
         
         guard let cgImage = image?.cgImage else { return nil }
         
@@ -46,98 +46,40 @@ class TextRecognizer {
         }
     }
     
-    internal func parseResults(for recognizedText: [String], from image: CGImage) -> CardModel? {
+    internal func parseResults(for recognizedText: [String], from image: CGImage) -> Card? {
         var linesToKeep = [String]()
-        var card = CardModel()
+        var card = Card()
         for line in recognizedText {
             if let email = extractEmail(from: line) {
-                card.email_ = email
+                card.email = email
             } else if let website = extractWebsite(from: line) {
-                card.website_ = website
+                card.website = website
             } else if let phoneNumber = extractPhoneNumber(from: line) {
-                card.phone_ = phoneNumber
+                card.phone = phoneNumber
             } else {
                 linesToKeep.append(line)
             }
         }
-        card.company_ = linesToKeep.first ?? ""
+        card.company = linesToKeep.first ?? ""
         if linesToKeep.count > 2 {
-            card.name_ = linesToKeep[1]
+            card.name = linesToKeep[1]
         }
         if linesToKeep.count > 3 {
-            card.jobTitle_ = linesToKeep[2]
+            card.jobTitle = linesToKeep[2]
         }
         if linesToKeep.count > 4 {
-            card.address2_ = linesToKeep[3]
+            card.address1 = linesToKeep[3]
         }
         if linesToKeep.count >  5 {
-            card.address2_ = linesToKeep[5]
+            card.address2 = linesToKeep[5]
         }
         if linesToKeep.count > 6 {
-            card.address3_ = linesToKeep[6]
+            card.address3 = linesToKeep[6]
         }
-        card.timeStamp_ = Date()
+        card.timeStamp = Date()
         card.options = recognizedText
         return card
     }
-    
-//    internal func validateImage(image: UIImage?, withCompletionHandler completion: @escaping (CardModel?) -> Void){
-//        
-//        guard let cgImage = image?.cgImage else { return completion(nil) }
-//        
-//        var recognizedText = [String]()
-//        
-//        var textRecognitionRequest = VNRecognizeTextRequest()
-//        textRecognitionRequest.recognitionLevel = .accurate
-//        textRecognitionRequest.usesLanguageCorrection = false
-//        textRecognitionRequest.recognitionLanguages = ["en-US"]
-//        
-//        textRecognitionRequest = VNRecognizeTextRequest() { (request, error) in
-//           guard let results = request.results,
-//                 !results.isEmpty,
-//                 let requestResults = request.results as? [VNRecognizedTextObservation]
-//           else { return completion(nil) }
-//           recognizedText = requestResults.compactMap { observation in
-//              return observation.topCandidates(1).first?.string
-//           }
-//        }
-//        
-//        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
-//        do {
-//            try handler.perform([textRecognitionRequest])
-//            print(recognizedText)
-//            let card = parseResults(for: recognizedText, from: cgImage)
-//            completion(card)
-//        } catch {
-//            print(error)
-//        }
-//    }
-    
-//    internal func parseResults(for recognizedText: [String], from image: CGImage) -> CardModel? {
-//        var linesToKeep = [String]()
-//        var card = CardModel()
-//        for line in recognizedText {
-//            if let email = extractEmail(from: line) {
-//                card.email_ = email
-//            } else if let website = extractWebsite(from: line) {
-//                card.website_ = website
-//            } else if let phoneNumber = extractPhoneNumber(from: line) {
-//                card.phone_ = phoneNumber
-//            } else {
-//                linesToKeep.append(line)
-//            }
-//        }
-//        card.company_ = linesToKeep.first ?? ""
-//        card.name_ = linesToKeep[1]
-//        card.jobTitle_ = linesToKeep[2]
-//        card.address1_ = linesToKeep[3]
-//        card.address2_ = ""
-//        card.address3_ = ""
-//        card.timeStamp_ = Date()
-//        fileManager.saveImage(image: image, date: card.timeStamp_)
-////        card.filePath_ = card.timeStamp_.description
-//        return card
-//    }
     
     func extractEmail(from line: String) -> String? {
         // Example: "Email: john.doe@email.com" or "john.doe@email.com"
