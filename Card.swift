@@ -9,26 +9,28 @@ import Foundation
 import SwiftData
 
 @Model final class Card {
-    var address: String?
-    var company: String?
-    var email: String?
-    var filePath: String?
-    var jobTitle: String?
-    var name: String?
-    var phone: String?
-    var timeStamp: Date?
-    var website: String?
+    var address: String
+    var company: String
+    var email: String
+    var filePath: String
+    var jobTitle: String
+    var name: String
+    var phone: String
+    var timeStamp: Date
+    var website: String
     var options: [String] = ["text 1", "text 2", "text 3",]
     
-    init(address: String? = nil,
-         company: String? = nil,
-         email: String? = nil,
-         filePath: String? = nil,
-         jobTitle: String? = nil,
-         name: String? = nil,
-         phone: String? = nil,
-         timeStamp: Date? = nil,
-         website: String? = nil) {
+    init(
+        address: String = "",
+        company: String = "",
+        email: String = "",
+        filePath: String = "",
+        jobTitle: String = "",
+        name: String = "",
+        phone: String = "",
+        timeStamp: Date = Date(),
+        website: String = ""
+    ) {
         self.address = address
         self.company = company
         self.email = email

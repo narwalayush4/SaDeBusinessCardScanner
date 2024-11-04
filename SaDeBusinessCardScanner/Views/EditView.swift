@@ -15,7 +15,7 @@ struct EditView: View {
     @State var card: Card
     let fileManager = FileSystem()
     private var image: UIImage {
-        fileManager.retrieveImage(from: card.timeStamp_) ?? UIImage()
+        return FileSystem().fetchImage(card: card)
     }
     
     var body: some View {
@@ -29,13 +29,13 @@ struct EditView: View {
                     .background(.thickMaterial)
                 Spacer(minLength: 15.0)
                 VStack{
-                    TextFieldWithOutDropdownView(title: "Name", text: $card.name_)
-                    TextFieldWithOutDropdownView(title: "Job Title", text: $card.jobTitle_)
-                    TextFieldWithOutDropdownView(title: "Company", text: $card.company_)
-                    TextFieldWithOutDropdownView(title: "Phone No", text: $card.phone_)
-                    TextFieldWithOutDropdownView(title: "Email", text: $card.email_)
-                    TextFieldWithOutDropdownView(title: "Address", text: $card.address_)
-                    TextFieldWithOutDropdownView(title: "Website", text: $card.website_)
+                    TextFieldWithOutDropdownView(title: "Name", text: $card.name)
+                    TextFieldWithOutDropdownView(title: "Job Title", text: $card.jobTitle)
+                    TextFieldWithOutDropdownView(title: "Company", text: $card.company)
+                    TextFieldWithOutDropdownView(title: "Phone No", text: $card.phone)
+                    TextFieldWithOutDropdownView(title: "Email", text: $card.email)
+                    TextFieldWithOutDropdownView(title: "Address", text: $card.address)
+                    TextFieldWithOutDropdownView(title: "Website", text: $card.website)
                 }
                 .padding(20.0)
                 .background {

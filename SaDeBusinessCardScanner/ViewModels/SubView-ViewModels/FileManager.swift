@@ -50,9 +50,15 @@ struct FileSystem {
         return formatter.string(from: date)
     }
     
+    func fetchImage(card: Card) -> UIImage {
+        if let image = retrieveImage(from: card.timeStamp) {
+            return image
+        } else {
+            return UIImage(named: "logo_512x512")!
+        }
+    }
     
-    
-    func retrieveImage(from date: Date) -> UIImage?{
+    func retrieveImage(from date: Date) -> UIImage? {
         let filename = formatDate(date) + ".jpg"
         let fileURL = imagesDirectory.appendingPathComponent(filename)
         if FileManager.default.fileExists(atPath: fileURL.path) {

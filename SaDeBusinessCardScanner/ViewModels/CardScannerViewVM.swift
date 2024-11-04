@@ -12,8 +12,6 @@ import UIKit
 
 class TextRecognizer {
     
-    let fileManager = FileSystem()
-    
     internal func validateImage(image: UIImage?) -> CardModel? {
         
         guard let cgImage = image?.cgImage else { return nil }
@@ -40,6 +38,7 @@ class TextRecognizer {
             try handler.perform([textRecognitionRequest])
             print(recognizedText)
             let card = parseResults(for: recognizedText, from: cgImage)
+            FileSystem().saveImage(image: cgImage, date: card!.timeStamp_)
             return card
         } catch {
             print(error)
@@ -79,7 +78,6 @@ class TextRecognizer {
         }
         card.timeStamp_ = Date()
         card.options = recognizedText
-        fileManager.saveImage(image: image, date: card.timeStamp_)
         return card
     }
     

@@ -6,18 +6,14 @@
 //
 
 import SwiftUI
-import CoreData
+import SwiftData
 import Inject
 
 struct MainView: View {
     
     @ObserveInjection var inject
     
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Card.entity(),
-                  sortDescriptors: [NSSortDescriptor(key: "timeStamp_", ascending: true)])
-    var cards: FetchedResults<Card>
-    
+    @Query(sort: \Card.timeStamp) private var cards: [Card]
     
     @State private var searchText = ""
     @State private var isDrawerOpen = false
@@ -25,14 +21,14 @@ struct MainView: View {
     
     private var filteredCards: [Card] {
         if searchText.isEmpty {
-            return Array(cards)
+            return cards
         }
         
         return cards.filter { card in
             let searchString = searchText.lowercased()
-            return card.name_.lowercased().contains(searchString) ||
-                   card.company_.lowercased().contains(searchString) ||
-                   card.address_.lowercased().contains(searchString)
+            return card.name.lowercased().contains(searchString) ||
+                   card.company.lowercased().contains(searchString) ||
+                   card.address.lowercased().contains(searchString)
         }
     }
     

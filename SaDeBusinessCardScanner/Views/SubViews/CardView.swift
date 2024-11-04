@@ -10,13 +10,13 @@ import CoreData
 
 struct CardView: View {
     
-    let fileManager = FileSystem()
+    @Environment(\.modelContext) var modelContext
     @State var card: Card
     @State private var isEditing = false
     @State private var isAlertPresented = false
     @State private var isShowingShareSheet = false
     private var image: UIImage {
-        return card.fetchImage(fileManager: fileManager)
+        return FileSystem().fetchImage(card: card)
     }
     
     var body: some View {
@@ -31,11 +31,11 @@ struct CardView: View {
                 }
                 HStack {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(card.name_)
+                        Text(card.name)
                             .font(.headline)
                             .foregroundColor(.primary)
                         
-                        Text(card.company_)
+                        Text(card.company)
                             .font(.body)
                             .foregroundColor(.secondary)
                             .lineLimit(2)
@@ -59,12 +59,9 @@ struct CardView: View {
                             isAlertPresented.toggle()
                         }
                         Button("Add to Group") {
-                            // Perform add to group action
-                            isAlertPresented.toggle()
                         }
                         
                         Button("Add to Contacts") {
-                            // Perform add to group action
                         }
                     } label: {
                         Image(systemName: "ellipsis.circle")
@@ -78,16 +75,12 @@ struct CardView: View {
             .sheet(isPresented: $isShowingShareSheet, onDismiss: {
                 isShowingShareSheet = false
             }, content: {
-                ShareSheetView(activityItems: [card.name_, image])
+                ShareSheetView(activityItems: [card.name, image])
                     .presentationDetents([.medium])
             })
             .alert("Delete Card", isPresented: $isAlertPresented, actions: {
                 Button("Delete", role: .destructive) {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        // Delay for view dismissal
-                        PersistenceController.shared.delete(card: card)
-                        debugPrint("after saving")
-                    }
+                    modelContext.delete(card)
                 }
                 Button("Cancel", role: .cancel) {
                     isAlertPresented.toggle()

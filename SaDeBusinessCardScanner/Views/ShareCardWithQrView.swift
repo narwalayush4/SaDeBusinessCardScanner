@@ -29,13 +29,13 @@ struct ShareCardWithQrView: View {
                                 .padding(.top)
                             
                             VStack(alignment: .leading) {
-                                Text("Name: \(card.name_)")
-                                Text("Company: \(card.company_)")
-                                Text("Job Title: \(card.jobTitle_)")
-                                Text("Phone: \(card.phone_)")
-                                Text("Email: \(card.email_)")
-                                Text("Website: \(card.website_)")
-                                Text("Address: \(card.address_)")
+                                Text("Name: \(card.name)")
+                                Text("Company: \(card.company)")
+                                Text("Job Title: \(card.jobTitle)")
+                                Text("Phone: \(card.phone)")
+                                Text("Email: \(card.email)")
+                                Text("Website: \(card.website)")
+                                Text("Address: \(card.address)")
                             }
                             .padding()
                         }
@@ -57,13 +57,13 @@ extension ShareCardWithQrView {
     
     private func createVCardString() -> String {
         return "BEGIN:VCARD\nVERSION:3.0\n" +
-               "N:\(card.name_)\n" +
-               "ORG:\(card.company_)\n" +
-               "TITLE:\(card.jobTitle_)\n" +
-               "TEL:\(card.phone_)\n" +
-               "EMAIL:\(card.email_)\n" +
-               "URL:\(card.website_)\n" +
-               "ADR:\(card.address_)\n" +
+               "N:\(card.name)\n" +
+               "ORG:\(card.company)\n" +
+               "TITLE:\(card.jobTitle)\n" +
+               "TEL:\(card.phone)\n" +
+               "EMAIL:\(card.email)\n" +
+               "URL:\(card.website)\n" +
+               "ADR:\(card.address)\n" +
                "END:VCARD"
     }
     

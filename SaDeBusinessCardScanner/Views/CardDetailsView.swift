@@ -11,13 +11,12 @@ import Contacts
 struct CardDetailsView: View {
     
     var card: Card
-    let fileManager = FileSystem()
     let screenWidth = UIScreen.main.bounds.size.width * 0.7
     @State private var isShowingShareSheet = false
     @State private var showAlert = false
     @State private var alertMessage = ""
     private var image: UIImage {
-        return fileManager.retrieveImage(from: card.timeStamp_) ?? UIImage(named: "logo_512x512")!
+        return FileSystem().fetchImage(card: card)
     }
     
     var body: some View {
@@ -40,9 +39,9 @@ struct CardDetailsView: View {
                             .background(.thickMaterial)
                             .presentationCornerRadius(10)
                         VStack(alignment: .leading){
-                            Text(card.name_)
+                            Text(card.name)
                                 .bold()
-                            Text(card.company_)
+                            Text(card.company)
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10.0)
                                     .foregroundStyle(Color.primaryC)
@@ -83,7 +82,7 @@ struct CardDetailsView: View {
                         .padding(.horizontal)
                     VStack(alignment: .leading){
                         Button {
-                            if let url = URL(string: "tel:\(card.phone_)"),
+                            if let url = URL(string: "tel:\(card.phone)"),
                                UIApplication.shared.canOpenURL(url) {
                                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
                             }
@@ -92,7 +91,7 @@ struct CardDetailsView: View {
                                 VStack(alignment: .leading){
                                     Text("Mobile Number")
                                         .foregroundStyle(.tertiaryC)
-                                    Text(card.phone_)
+                                    Text(card.phone)
                                         .foregroundStyle(.black)
                                 }
                                 Spacer()
@@ -105,7 +104,7 @@ struct CardDetailsView: View {
                             .frame(maxWidth: .infinity)
                             .foregroundStyle(Color.primaryC)
                         Button {
-                            if let emailURL = URL(string: "mailto:\(card.email_)") {
+                            if let emailURL = URL(string: "mailto:\(card.email)") {
                                 UIApplication.shared.open(emailURL)
                             }
                         } label: {
@@ -113,7 +112,7 @@ struct CardDetailsView: View {
                                 VStack(alignment: .leading){
                                     Text("Email")
                                         .foregroundStyle(.tertiaryC)
-                                    Text(card.email_)
+                                    Text(card.email)
                                         .foregroundStyle(.black)
                                 }
                                 Spacer()
@@ -127,7 +126,7 @@ struct CardDetailsView: View {
                             .frame(maxWidth: .infinity)
                             .foregroundStyle(Color.primaryC)
                         Button {
-                            if let websiteURL = URL(string: "https://\(card.website_)") {
+                            if let websiteURL = URL(string: "https://\(card.website)") {
                                 UIApplication.shared.open(websiteURL)
                             }
                         } label: {
@@ -135,7 +134,7 @@ struct CardDetailsView: View {
                                 VStack(alignment: .leading){
                                     Text("Website")
                                         .foregroundStyle(.tertiaryC)
-                                    Text(card.website_)
+                                    Text(card.website)
                                         .foregroundStyle(.black)
                                 }
                                 Spacer()
@@ -165,13 +164,13 @@ struct CardDetailsView: View {
                         .padding(.horizontal)
                     VStack(alignment: .leading){
                         Button {
-                            if let mapURL = URL(string: "http://maps.apple.com/?address=\(card.address_)") {
+                            if let mapURL = URL(string: "http://maps.apple.com/?address=\(card.address)") {
                                         UIApplication.shared.open(mapURL)
                                     }
                         } label: {
                             HStack{
                                 VStack(alignment: .leading){
-                                    Text(card.address_)
+                                    Text(card.address)
                                         .foregroundStyle(.black)
                                 }
                                 Spacer()
@@ -227,7 +226,7 @@ struct CardDetailsView: View {
                             VStack(alignment: .leading){
                                 Text("Company")
                                     .foregroundStyle(.tertiaryC)
-                                Text(card.company_)
+                                Text(card.company)
                             }
                             Spacer()
                         }
@@ -239,7 +238,7 @@ struct CardDetailsView: View {
                             VStack(alignment: .leading){
                                 Text("Job Title")
                                     .foregroundStyle(.tertiaryC)
-                                Text(card.jobTitle_)
+                                Text(card.jobTitle)
                             }
                             Spacer()
                         }
@@ -258,7 +257,7 @@ struct CardDetailsView: View {
         .sheet(isPresented: $isShowingShareSheet, onDismiss: {
             isShowingShareSheet = false
         }, content: {
-            ShareSheetView(activityItems: [card.name_, image])
+            ShareSheetView(activityItems: [card.name, image])
                 .presentationDetents([.medium])
         })
         .toolbar(content: {
@@ -291,24 +290,24 @@ extension CardDetailsView {
     
     private func addToContacts() {
         let newContact = CNMutableContact()
-        newContact.givenName = card.name_
-        if !card.phone_.isEmpty {
-            let phoneNumber = CNLabeledValue(label: CNLabelPhoneNumberMain, value: CNPhoneNumber(stringValue: card.phone_))
+        newContact.givenName = card.name
+        if !card.phone.isEmpty {
+            let phoneNumber = CNLabeledValue(label: CNLabelPhoneNumberMain, value: CNPhoneNumber(stringValue: card.phone))
             newContact.phoneNumbers = [phoneNumber]
         }
-        if !card.email_.isEmpty {
-            let email = CNLabeledValue(label: CNLabelHome, value: card.email_ as NSString)
+        if !card.email.isEmpty {
+            let email = CNLabeledValue(label: CNLabelHome, value: card.email as NSString)
             newContact.emailAddresses = [email]
         }
-        newContact.jobTitle = card.jobTitle_
-        newContact.organizationName = card.company_
-        if !card.website_.isEmpty {
-            let urlAddress = CNLabeledValue(label: CNLabelURLAddressHomePage, value: card.website_ as NSString)
+        newContact.jobTitle = card.jobTitle
+        newContact.organizationName = card.company
+        if !card.website.isEmpty {
+            let urlAddress = CNLabeledValue(label: CNLabelURLAddressHomePage, value: card.website as NSString)
             newContact.urlAddresses = [urlAddress]
         }
-        if !card.address_.isEmpty {
+        if !card.address.isEmpty {
             let homeAddress = CNMutablePostalAddress()
-            homeAddress.street = card.address_ // Assuming this is a single line address
+            homeAddress.street = card.address // Assuming this is a single line address
             newContact.postalAddresses = [CNLabeledValue(label: CNLabelHome, value: homeAddress as CNPostalAddress)]
         }
         

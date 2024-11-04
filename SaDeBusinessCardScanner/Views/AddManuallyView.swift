@@ -10,8 +10,9 @@ import SwiftUI
 
 struct AddManuallyView: View {
     
-    @Environment(\.managedObjectContext) var moc
+    @Environment(\.modelContext) var modelContext
     @Environment(\.presentationMode) var presentationMode
+    
     @State var isScannerPresented = false
     @State private var scannedCard = CardModel()
     let fileManager = FileSystem()
@@ -139,21 +140,17 @@ extension AddManuallyView{
     
     func saveCard(cardModel: CardModel?) {
         
-        let card = Card(context: moc)
-        card.email_ = cardModel?.email_ ?? ""
-        card.website_ = cardModel?.website_ ?? ""
-        card.phone_ = cardModel?.phone_ ?? ""
-        card.company_ = cardModel?.company_ ?? ""
-        card.name_ =  cardModel?.name_ ?? ""
-        card.jobTitle_ = cardModel?.jobTitle_ ?? ""
-        card.address_ =  cardModel?.address1_.appending(cardModel?.address2_.appending(cardModel?.address3_ ?? "") ?? "") ?? ""
-        card.timeStamp_ = cardModel?.timeStamp_ ?? Date()
+        let card = Card()
+        card.email = cardModel?.email_ ?? ""
+        card.website = cardModel?.website_ ?? ""
+        card.phone = cardModel?.phone_ ?? ""
+        card.company = cardModel?.company_ ?? ""
+        card.name =  cardModel?.name_ ?? ""
+        card.jobTitle = cardModel?.jobTitle_ ?? ""
+        card.address =  cardModel?.address1_.appending(cardModel?.address2_.appending(cardModel?.address3_ ?? "") ?? "") ?? ""
+        card.timeStamp = cardModel?.timeStamp_ ?? Date()
         
-        
-        //TODO: CHANGE
-//        PersistenceController.preview.save()
-        PersistenceController.shared.save()
-        
+        modelContext.insert(card)
         print(card)
     }
 }
