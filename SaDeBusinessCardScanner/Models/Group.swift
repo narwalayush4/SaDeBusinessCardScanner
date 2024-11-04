@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import SwiftData
 
-struct Group: Identifiable {
-    var id = UUID()
+@Model final class Group {
+    var id: UUID = UUID()
     var name: String
-    var cards: [Card] = []
+    var cards: [Card]
+    
+    init(name: String, cards: [Card] = []) {
+        self.name = name
+        self.cards = cards
+    }
 }
