@@ -9,10 +9,12 @@ import Foundation
 import SwiftData
 
 @Model final class Card {
-    private(set) var fullAddress: String = ""
-    var address1: String { didSet { updateFullAddress() } }
-    var address2: String { didSet { updateFullAddress() } }
-    var address3: String { didSet { updateFullAddress() } }
+    var fullAddress: String {
+        return [address1, address2, address3].filter { !$0.isEmpty }.joined(separator: "; ")
+    }
+    var address1: String
+    var address2: String
+    var address3: String
     var company: String
     var email: String
     var filePath: String
@@ -47,11 +49,6 @@ import SwiftData
         self.phone = phone
         self.timeStamp = timeStamp
         self.website = website
-    }
-    
-    // Private method to update the full address
-    private func updateFullAddress() {
-        fullAddress = "\(address1); \(address2); \(address3)"
     }
     
     static var shared: Card {
