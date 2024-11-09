@@ -8,13 +8,14 @@
 import Foundation
 import SwiftData
 
-@Model final class Group {
+@Model
+final class Group {
     var id: UUID = UUID()
     var name: String
-    var cards: [Card]
+    @Relationship(deleteRule: .nullify, inverse: \Card.groups)
+    var cards: [Card] = []
     
-    init(name: String, cards: [Card] = []) {
+    init(name: String) {
         self.name = name
-        self.cards = cards
     }
 }

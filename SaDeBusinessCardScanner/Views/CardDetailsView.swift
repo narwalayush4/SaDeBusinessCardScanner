@@ -212,6 +212,29 @@ struct CardDetailsView: View {
                         }
                 }
             }
+            Section {
+                VStack(alignment: .leading, spacing: 0){
+                    VStack(alignment: .leading){
+                        HStack{
+                            VStack(alignment: .leading){
+                                Text("Add groupd data here")
+                                    .foregroundStyle(.black)
+                            }
+                            Spacer()
+                            Image(systemName: "mappin.circle.fill")
+                                .foregroundStyle(Color.secondaryC)
+                        }
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(.white)
+                    }
+                    .padding(.horizontal)
+
+                }
+            }
             .padding(.trailing)
             Spacer(minLength: 15)
             Section {
