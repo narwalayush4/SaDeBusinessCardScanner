@@ -212,30 +212,8 @@ struct CardDetailsView: View {
                         }
                 }
             }
-            Section {
-                VStack(alignment: .leading, spacing: 0){
-                    VStack(alignment: .leading){
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Add groupd data here")
-                                    .foregroundStyle(.black)
-                            }
-                            Spacer()
-                            Image(systemName: "mappin.circle.fill")
-                                .foregroundStyle(Color.secondaryC)
-                        }
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(.white)
-                    }
-                    .padding(.horizontal)
-
-                }
-            }
             .padding(.trailing)
+            CardGroupView(card: card)
             Spacer(minLength: 15)
             Section {
                 VStack(alignment: .leading, spacing: 0){
@@ -306,6 +284,37 @@ struct CardDetailsView: View {
         }
         .frame(maxWidth: .infinity)
         .background(Color.primaryC)
+    }
+}
+
+struct CardGroupView: View {
+    var card: Card
+    
+    var body: some View {
+        if let group = card.group {
+            Section {
+                VStack(alignment: .leading, spacing: 0){
+                    VStack(alignment: .leading){
+                        HStack{
+                            VStack(alignment: .leading){
+                                Text(group.name)
+                                    .foregroundStyle(.black)
+                            }
+                            Spacer()
+                        }
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(.white)
+                    }
+                    .padding(.leading)
+
+                }
+            }
+            .padding(.trailing)
+        }
     }
 }
 

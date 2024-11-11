@@ -26,7 +26,7 @@ final class Card {
     var timeStamp: Date
     var website: String
     var options: [String] = []
-    var groups: Group? = nil
+    var group: Group? = nil
     
     init(
         address1: String = "",
@@ -64,6 +64,9 @@ final class Card {
         card.website = "www.example.com"
         card.address1 = "123 Main Street"
         card.timeStamp = Date(timeIntervalSince1970: 60000)
+        let group = Group(name: "Dummy Group")
+        card.group = group
+        group.cards.append(card)
         return card
     }
 }
