@@ -10,15 +10,16 @@ import SwiftData
 
 class DefaultGroupsManager {
     
+    static let defaultGroups = [
+        "Family",
+        "Business",
+        "Customer",
+        "Office",
+        "Friends",
+        "VIP"
+    ]
+    
     static func setupDefaultGroups(modelContext: ModelContext) {
-        let defaultGroups = [
-            "Family",
-            "Business",
-            "Customer",
-            "Office",
-            "Friends",
-            "VIP"
-        ]
         for groupName in defaultGroups {
             let group = Group(name: groupName)
             modelContext.insert(group)

@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct GroupCellView: View {
-    var name = ""
-    var count = 0
+    var name: String
+    var count: Int
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                .foregroundStyle(.white)
-                .frame(height: UIScreen.main.bounds.height/7)
             VStack {
                 HStack {
                     Text("\(count)")
@@ -23,14 +19,16 @@ struct GroupCellView: View {
                         .font(.system(size: 40))
                         .foregroundStyle(.blue)
                     Spacer()
-                }.padding(.horizontal)
+                }.padding(.horizontal).padding(.top)
                 HStack {
                     Text(name)
-                        .font(.system(size: 30, weight: .light, design: .rounded))
+                        .font(.title)
                     Spacer()
                 }
-                .padding(.horizontal)
+                .padding(.horizontal).padding(.bottom)
+            }.background {
+                RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                    .foregroundStyle(.white)
             }
-        }
     }
 }

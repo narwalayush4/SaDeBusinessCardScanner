@@ -11,8 +11,22 @@ struct GroupDetailView: View {
     var group: Group
     
     var body: some View {
-        Text(group.name)
+        if !group.cards.isEmpty {
+            ScrollView {
+                VStack {
+                    ForEach(group.cards) { card in
+                        CardView(card: card)
+                    }
+                }
+            }
             .navigationTitle(group.name)
             .toolbarTitleDisplayMode(.large)
+        } else {
+            Text("No cards in this group.")
+                .font(.callout)
+                .bold()
+                .navigationTitle(group.name)
+                .toolbarTitleDisplayMode(.large)
+        }
     }
 }

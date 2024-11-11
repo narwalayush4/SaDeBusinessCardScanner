@@ -6,52 +6,46 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct GroupsView: View {
     
+    @Query private var groups: [Group]
+    @Environment(\.modelContext) private var modelContext
+    
     @State private var isAlertPresented = false
     @State private var newGroupName: String = ""
-    @State private var groups: [Group] = [
-        Group(name: "Family"),
-        Group(name: "Business"),
-        Group(name: "Customer"),
-        Group(name: "Office"),
-        Group(name: "Friends"),
-        Group(name: "VIP")
-    ]
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 10) {
-                ForEach(0..<3) { row in
-                    HStack(spacing: 5) {
-                        ForEach(0..<2) { col in
-                            let index = row * 2 + col
-                            if index < groups.count {
-                                NavigationLink(destination: GroupDetailView(group: groups[index])) {
-                                    GroupCellView(name: groups[index].name, count: groups[index].cards.count)
-                                }
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 10) {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 5) {
+                        ForEach(groups) { group in
+                            NavigationLink(destination: GroupDetailView(group: group)) {
+                                GroupCellView(name: group.name, count: group.cards.count)
                             }
                         }
                     }.safeAreaPadding(.horizontal)
+                    
+                    HStack {
+                        RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
+                            .foregroundStyle(Color(uiColor: .lightGray))
+                            .opacity(0.5)
+                            .frame(height: 2)
+                        Text("Your Groups")
+                            .foregroundStyle(Color(uiColor: .lightGray))
+                        RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
+                            .foregroundStyle(Color(uiColor: .lightGray))
+                            .frame(height: 2)
+                            .opacity(0.5)
+                    }.safeAreaPadding(.horizontal)
+                    
+                    Spacer()
                 }
-                
-                HStack {
-                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
-                        .foregroundStyle(Color(uiColor: .lightGray))
-                        .opacity(0.5)
-                        .frame(height: 2)
-                    Text("Your Groups")
-                        .foregroundStyle(Color(uiColor: .lightGray))
-                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
-                        .foregroundStyle(Color(uiColor: .lightGray))
-                        .frame(height: 2)
-                        .opacity(0.5)
-                }.safeAreaPadding(.horizontal)
-                
-                Spacer()
             }
             .background(Color.primaryC)
+            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Groups")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -66,7 +60,8 @@ struct GroupsView: View {
                 TextField("Group Name", text: $newGroupName)
                 Button("Create") {
                     if !newGroupName.isEmpty {
-                        groups.append(Group(name: newGroupName))
+                        let newGroup = Group(name: newGroupName)
+                        modelContext.insert(newGroup)
                         newGroupName = ""
                     }
                 }
