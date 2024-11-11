@@ -15,6 +15,7 @@ struct CardDetailsView: View {
     @State private var isShowingShareSheet = false
     @State private var showAlert = false
     @State private var alertMessage = ""
+    @State private var showAddToGroupDialog = false
     private var image: UIImage {
         return FileSystem().fetchImage(card: card)
     }
@@ -199,8 +200,7 @@ struct CardDetailsView: View {
                     .padding(.horizontal)
                 Spacer()
                 Button {
-                    //TODO: Add to group
-                    //Add to group
+                    showAddToGroupDialog = true
                 } label: {
                     Text("Add to Group")
                         .foregroundStyle(Color.white)
@@ -254,6 +254,9 @@ struct CardDetailsView: View {
 
                 }
             }
+        }
+        .sheet(isPresented: $showAddToGroupDialog) {
+            AddToGroupView(card: card)
         }
         .sheet(isPresented: $isShowingShareSheet, onDismiss: {
             isShowingShareSheet = false

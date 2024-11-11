@@ -21,12 +21,17 @@ struct GroupDetailView: View {
             }
             .navigationTitle(group.name)
             .toolbarTitleDisplayMode(.large)
+            .background(Color.primaryC)
         } else {
-            Text("No cards in this group.")
-                .font(.callout)
-                .bold()
-                .navigationTitle(group.name)
-                .toolbarTitleDisplayMode(.large)
+            ZStack {
+                Color.primaryC.edgesIgnoringSafeArea(.all)
+                Text("No cards in this group.")
+                    .font(.callout)
+                    .bold()
+            }
+            .navigationTitle(group.name)
+            .toolbarTitleDisplayMode(.large)
         }
     }
 }
+

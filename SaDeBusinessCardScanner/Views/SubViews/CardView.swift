@@ -14,6 +14,7 @@ struct CardView: View {
     @State private var isEditing = false
     @State private var isAlertPresented = false
     @State private var isShowingShareSheet = false
+    @State private var showAddToGroupDialog = false
     private var image: UIImage {
         return FileSystem().fetchImage(card: card)
     }
@@ -58,6 +59,7 @@ struct CardView: View {
                             isAlertPresented.toggle()
                         }
                         Button("Add to Group") {
+                            showAddToGroupDialog = true
                         }
                         
                         Button("Add to Contacts") {
@@ -77,6 +79,9 @@ struct CardView: View {
                 ShareSheetView(activityItems: [card.name, image])
                     .presentationDetents([.medium])
             })
+            .sheet(isPresented: $showAddToGroupDialog) {
+                AddToGroupView(card: card)
+            }
             .alert("Delete Card", isPresented: $isAlertPresented, actions: {
                 Button("Delete", role: .destructive) {
                     modelContext.delete(card)
