@@ -15,6 +15,7 @@ struct CardDetailsView: View {
     @State private var isShowingShareSheet = false
     @State private var showAlert = false
     @State private var alertMessage = ""
+    @State private var showAddToGroupDialog = false
     private var image: UIImage {
         return FileSystem().fetchImage(card: card)
     }
@@ -199,8 +200,7 @@ struct CardDetailsView: View {
                     .padding(.horizontal)
                 Spacer()
                 Button {
-                    //TODO: Add to group
-                    //Add to group
+                    showAddToGroupDialog = true
                 } label: {
                     Text("Add to Group")
                         .foregroundStyle(Color.white)
@@ -213,6 +213,7 @@ struct CardDetailsView: View {
                 }
             }
             .padding(.trailing)
+            CardGroupView(card: card)
             Spacer(minLength: 15)
             Section {
                 VStack(alignment: .leading, spacing: 0){
@@ -254,6 +255,9 @@ struct CardDetailsView: View {
                 }
             }
         }
+        .sheet(isPresented: $showAddToGroupDialog) {
+            AddToGroupView(card: card)
+        }
         .sheet(isPresented: $isShowingShareSheet, onDismiss: {
             isShowingShareSheet = false
         }, content: {
@@ -283,6 +287,37 @@ struct CardDetailsView: View {
         }
         .frame(maxWidth: .infinity)
         .background(Color.primaryC)
+    }
+}
+
+struct CardGroupView: View {
+    var card: Card
+    
+    var body: some View {
+        if let group = card.group {
+            Section {
+                VStack(alignment: .leading, spacing: 0){
+                    VStack(alignment: .leading){
+                        HStack{
+                            VStack(alignment: .leading){
+                                Text(group.name)
+                                    .foregroundStyle(.black)
+                            }
+                            Spacer()
+                        }
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(.white)
+                    }
+                    .padding(.leading)
+
+                }
+            }
+            .padding(.trailing)
+        }
     }
 }
 

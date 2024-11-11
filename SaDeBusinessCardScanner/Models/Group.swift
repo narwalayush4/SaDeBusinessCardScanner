@@ -6,9 +6,16 @@
 //
 
 import Foundation
+import SwiftData
 
-struct Group: Identifiable {
-    var id = UUID()
+@Model
+final class Group {
+    var id: UUID = UUID()
     var name: String
+    @Relationship(deleteRule: .nullify, inverse: \Card.group)
     var cards: [Card] = []
+    
+    init(name: String) {
+        self.name = name
+    }
 }

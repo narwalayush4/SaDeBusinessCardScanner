@@ -17,11 +17,13 @@
 		A73588482CD519FD00CC9D91 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = A73588472CD519FD00CC9D91 /* Inject */; };
 		A7481C592B38465C00851887 /* AddManuallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7481C582B38465C00851887 /* AddManuallyView.swift */; };
 		A761C6282CD55D3A003D60F9 /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761C6272CD55D39003D60F9 /* GroupDetailView.swift */; };
-		A761C62A2CD55D4B003D60F9 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761C6292CD55D4B003D60F9 /* CellView.swift */; };
+		A761C62A2CD55D4B003D60F9 /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761C6292CD55D4B003D60F9 /* GroupCellView.swift */; };
 		A7638F252AC3D90A0037E292 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7638F242AC3D90A0037E292 /* GroupsView.swift */; };
 		A7638F292AC3DA980037E292 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7638F282AC3DA980037E292 /* Group.swift */; };
 		A7654BB82AFA629E00279B2B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7654BB72AFA629E00279B2B /* FileManager.swift */; };
 		A767AF6A2B34DDF2001E5B8E /* CardScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767AF692B34DDF2001E5B8E /* CardScannerView.swift */; };
+		A7891A872CE0EE9500CB0681 /* DefaultGroupsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7891A862CE0EE9500CB0681 /* DefaultGroupsManager.swift */; };
+		A7891A8B2CE1CE7C00CB0681 /* AddToGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7891A8A2CE1CE7C00CB0681 /* AddToGroupView.swift */; };
 		A78E3D992CC6639500B9C20F /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E3D982CC6639500B9C20F /* SearchBarView.swift */; };
 		A7913C0E2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7913C0D2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift */; };
 		A7950DC22CD2CA9B003E7D0D /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7950DC12CD2CA9B003E7D0D /* DrawerView.swift */; };
@@ -51,11 +53,13 @@
 		A73588442CD50A1C00CC9D91 /* ShareCardWithQrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardWithQrView.swift; sourceTree = "<group>"; };
 		A7481C582B38465C00851887 /* AddManuallyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddManuallyView.swift; sourceTree = "<group>"; };
 		A761C6272CD55D39003D60F9 /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
-		A761C6292CD55D4B003D60F9 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		A761C6292CD55D4B003D60F9 /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
 		A7638F242AC3D90A0037E292 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		A7638F282AC3DA980037E292 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		A7654BB72AFA629E00279B2B /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		A767AF692B34DDF2001E5B8E /* CardScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScannerView.swift; sourceTree = "<group>"; };
+		A7891A862CE0EE9500CB0681 /* DefaultGroupsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultGroupsManager.swift; sourceTree = "<group>"; };
+		A7891A8A2CE1CE7C00CB0681 /* AddToGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToGroupView.swift; sourceTree = "<group>"; };
 		A78E3D982CC6639500B9C20F /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		A7913C0D2AE6C4B700AE9B13 /* TextFieldWithDropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDropdownView.swift; sourceTree = "<group>"; };
 		A7950DC12CD2CA9B003E7D0D /* DrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
@@ -92,7 +96,7 @@
 		A736B8042ACC5EC300F8FF0F /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				A761C6292CD55D4B003D60F9 /* CellView.swift */,
+				A761C6292CD55D4B003D60F9 /* GroupCellView.swift */,
 				A7950DC12CD2CA9B003E7D0D /* DrawerView.swift */,
 				A78E3D982CC6639500B9C20F /* SearchBarView.swift */,
 				A71A2A052C9E092100D73FF8 /* ShareSheetView.swift */,
@@ -158,6 +162,7 @@
 				A7F9E4BE2B17621300B1C8B3 /* CardDetailsView.swift */,
 				A73588442CD50A1C00CC9D91 /* ShareCardWithQrView.swift */,
 				A7128ECB2B4640D10076CD8F /* LoadingVIew.swift */,
+				A7891A8A2CE1CE7C00CB0681 /* AddToGroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 		A79B80552ABF600A0056C6FC /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A7891A862CE0EE9500CB0681 /* DefaultGroupsManager.swift */,
 				A79B80272ABF5F3F0056C6FC /* Assets.xcassets */,
 				A79CA4F82CD885AD001149D4 /* Assets.swift */,
 			);
@@ -273,7 +279,7 @@
 				A7A1D06F2AD5184E0019143F /* ImageTextRecognizable.swift in Sources */,
 				A79B80692ABF61380056C6FC /* SettingsViewVM.swift in Sources */,
 				A7128ECC2B4640D10076CD8F /* LoadingVIew.swift in Sources */,
-				A761C62A2CD55D4B003D60F9 /* CellView.swift in Sources */,
+				A761C62A2CD55D4B003D60F9 /* GroupCellView.swift in Sources */,
 				A71B699D2AC4671B0010A31A /* NavBarView.swift in Sources */,
 				A79CA4F92CD885AD001149D4 /* Assets.swift in Sources */,
 				A73588452CD50A1C00CC9D91 /* ShareCardWithQrView.swift in Sources */,
@@ -292,7 +298,9 @@
 				A704DA7C2B3DC6C800FBDABA /* TextFieldWithOutDropdownView.swift in Sources */,
 				A767AF6A2B34DDF2001E5B8E /* CardScannerView.swift in Sources */,
 				A71A2A062C9E092600D73FF8 /* ShareSheetView.swift in Sources */,
+				A7891A872CE0EE9500CB0681 /* DefaultGroupsManager.swift in Sources */,
 				A7481C592B38465C00851887 /* AddManuallyView.swift in Sources */,
+				A7891A8B2CE1CE7C00CB0681 /* AddToGroupView.swift in Sources */,
 				A79B80242ABF5F3C0056C6FC /* SaDeBusinessCardScannerApp.swift in Sources */,
 				A79B80652ABF610F0056C6FC /* CardView.swift in Sources */,
 				A79B806D2ABF6DD60056C6FC /* TabBarView.swift in Sources */,

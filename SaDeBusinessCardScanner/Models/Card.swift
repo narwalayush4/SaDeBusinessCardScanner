@@ -8,7 +8,9 @@
 import Foundation
 import SwiftData
 
-@Model final class Card {
+@Model
+final class Card {
+    var id: UUID = UUID()
     var fullAddress: String {
         return [address1, address2, address3].filter { !$0.isEmpty }.joined(separator: "; ")
     }
@@ -24,6 +26,7 @@ import SwiftData
     var timeStamp: Date
     var website: String
     var options: [String] = []
+    var group: Group? = nil
     
     init(
         address1: String = "",
@@ -61,6 +64,9 @@ import SwiftData
         card.website = "www.example.com"
         card.address1 = "123 Main Street"
         card.timeStamp = Date(timeIntervalSince1970: 60000)
+        let group = Group(name: "Dummy Group")
+        card.group = group
+        group.cards.append(card)
         return card
     }
 }
