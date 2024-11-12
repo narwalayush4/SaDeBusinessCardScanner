@@ -48,10 +48,10 @@ struct AddToGroupView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add") {
-                        if let selectedGroup = selectedGroup {
-                            addCardToGroup(selectedGroup)
-                        } else if !newGroupName.isEmpty {
+                        if !newGroupName.isEmpty {
                             createNewGroupAndAddCard()
+                        } else if let selectedGroup = selectedGroup {
+                            addCardToGroup(selectedGroup)
                         }
                         dismiss()
                     }
